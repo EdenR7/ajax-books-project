@@ -1,0 +1,121 @@
+@import url(reset.css);
+
+:root {
+  --clr-primary-200: hsl(34, 49%, 79%);
+  --clr-primary-500: hsl(27, 74%, 41%);
+  --clr-primary-650: hsl(235, 39%, 24%);
+
+  --clr-neutral-100: hsl(0, 0%, 100%);
+  --clr-neutral-110: hsl(0, 0%, 95%);
+  --clr-neutral-300: hsl(0, 0%, 65%);
+  --clr-neutral-700: hsl(0, 0%, 20%);
+
+  --box-shadow-light1: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --box-shadow-light2: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+body,
+html {
+  height: 100vh;
+  width: 100%;
+}
+
+body {
+  position: relative;
+  font-family: "Roboto", sans-serif;
+  line-height: 1.5;
+  background-color: var(--clr-primary-200);
+}
+
+a,
+input {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul {
+  max-width: 900px;
+  padding: 0;
+  list-style: none;
+}
+input {
+  border-radius: 4px;
+  padding-inline: 0.5rem;
+  border: 0;
+  outline: 0;
+}
+.flex-group {
+  display: flex;
+  flex-wrap: wrap;
+}
+form {
+  padding: 0;
+  margin: 0;
+}
+.grid-group {
+  display: grid;
+}
+
+.btn {
+  box-shadow: var(--box-shadow-light2);
+  background: var(--clr-neutral-100);
+  color: var(--clr-primary-650);
+  cursor: pointer;
+  padding-block: 0.5rem;
+  padding-inline: 0.75rem;
+  border: 0;
+  border-radius: 4px;
+}
+
+.close-btn:active,
+.btn:active {
+  transform: translateY(2px);
+}
+
+.close-btn {
+  box-shadow: var(--box-shadow-light2);
+  cursor: pointer;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  color: var(--clr-primary-500);
+}
+
+.navbar {
+  align-items: center;
+  color: var(--clr-neutral-110);
+  background-color: var(--clr-neutral-700);
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.navbar-options {
+  color: var(--clr-neutral-110);
+  gap: 1rem;
+}
+
+.navbar-brand {
+  font-size: 1.15rem;
+  display: inline-block;
+  position: relative;
+}
+
+.navbar-brand::after {
+  background-color: var(--clr-primary-500);
+  content: "";
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 90%;
+  height: 3px;
+}
+
+.current-page {
+  color: var(--clr-primary-500);
+}
+
+@media (max-width: 768px) {
+  .icon-text {
+    display: none;
+  }
+}

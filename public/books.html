@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>myBooks</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/books.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav class="navbar flex-group">
+      <div class="navbar-brand">
+        <h3>myBooks</h3>
+      </div>
+      <ul class="navbar-options flex-group">
+        <li>
+          <a href="home.html"
+            ><i class="fa-solid fa-house"></i>
+            <span class="icon-text">Home</span></a
+          >
+        </li>
+        <li>
+          <a href="history.html"
+            ><i class="fa-solid fa-landmark"></i>
+            <span class="icon-text">History</span></a
+          >
+        </li>
+        <li>
+          <a href="#"
+            ><i class="fa-regular fa-star"></i>
+            <span class="icon-text">Favourites</span></a
+          >
+        </li>
+        <li>
+          <a class="current-page" href="#"
+            ><i class="fa-solid fa-magnifying-glass"></i>
+            <span class="icon-text"> All Books</span></a
+          >
+        </li>
+      </ul>
+    </nav>
+    <main class="grid-group">
+      <div class="side-bar-wrapper">
+        <ul class="side-bar flex-group">
+          <li>Actions</li>
+          <li>Delete</li>
+          <li>Add New Book</li>
+        </ul>
+      </div>
+      <div class="add-btn-container">
+        <div class="create-options flex-group">
+          <button id="manually" class="btn option-btn" type="button">
+            Add manually
+          </button>
+          <button id="web" class="btn option-btn" type="button">
+            Add from Web
+          </button>
+        </div>
+      </div>
+      <div class="actions-container flex-group">
+        <div class="forms-container">
+          <form id="add">
+            <label for="title">book name:</label>
+            <input id="title" type="text" name="title" />
+            <label for="authors">book authur:</label>
+            <input id="authors" type="text" name="authors" />
+            <label for="numPages">number of pages:</label>
+            <input id="numPages" type="number" name="numPages" />
+            <label for="description">description:</label>
+            <input id="description" type="text" name="description" />
+            <label for="categories">category/genre:</label>
+            <input id="categories" type="text" name="categories" />
+            <label for="ISBN">ISBN:</label>
+            <input id="ISBN" type="text" name="ISBN" />
+            <label for="imageLink-small">add image link-small:</label>
+            <input id="imageLink-small" type="text" name="imageLink-small" />
+            <label for="imageLink-big">add image link-big:</label>
+            <input id="imageLink-big" type="text" name="imageLink-big" />
+          </form>
+          <form id="delete"></form>
+        </div>
+        <div class="web-books-wrapper flex-group">
+          <div class="flex-group search-book">
+            <form class="flex-group" id="search-by-name">
+              <input
+                id="name-field"
+                type="text"
+                placeholder="Search by name.."
+              />
+              <button id="search" class="btn" type="submit">
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </form>
+            <button onclick="addBooks()" class="btn" id="add-books">
+              Add (<span id="num-of-books">0</span>)
+            </button>
+          </div>
+          <ul class="flex-group" id="books"></ul>
+          <div class="navigate-pages-wrapper">
+            <button class="prev btn" onclick="prevPage()">
+              <i class="arrow fa-solid fa-arrow-left"></i>
+            </button>
+            <button class="next btn" onclick="nextPage()">
+              <i class="arrow fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="javascript/books.js"></script>
+  </body>
+</html>
