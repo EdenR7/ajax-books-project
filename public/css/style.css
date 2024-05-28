@@ -39,6 +39,7 @@ ul {
   list-style: none;
 }
 input {
+  box-shadow: var(--box-shadow-light2);
   border-radius: 4px;
   padding-inline: 0.5rem;
   border: 0;

@@ -68,7 +68,7 @@ function getElementProperties(element) {
             numOfCopies: copies
         };
     } catch (error) {
-        console.log(error);
+        console.log(element);
     }
     return res;
 }
@@ -104,16 +104,20 @@ inputField.addEventListener('input', () => { // new input
 function bookDetails(element, id) {
     let res;
     try {
+        const title = element.title ? element.title : "--";
+        const author = element.authors && element.authors[0] ? element.authors[0] : "Anonymous";
+        const isbn = element.industryIdentifiers && element.industryIdentifiers[0] && element.industryIdentifiers[0].identifier ? element.industryIdentifiers[0].identifier : "--";
+        const imgSrc = element.imageLinks && element.imageLinks.smallThumbnail ? element.imageLinks.smallThumbnail : "--";
         res = `
         <li onclick="addBookToList(event)" id="${id}" class="flex-group book">
                   <div class="book-text flex-group">
-                    <h3>${element.title}</h3>
-                    <p><span class="key">Authors:</span> ${element.authors[0] ? element.authors[0] : "Anonymus"}</p>
-                    <p><span class="key">ISBN:</span> ${element.industryIdentifiers[0].identifier ? element.industryIdentifiers[0].identifier : ""}</p>
+                    <h3>${title}</h3>
+                    <p><span class="key">Authors:</span> ${author}</p>
+                    <p><span class="key">ISBN:</span> ${isbn}</p>
                   </div>
                   <div class="book-img flex-group">
                     <img
-                      src=${element.imageLinks.smallThumbnail ? element.imageLinks.smallThumbnail : ""}
+                      src="${imgSrc}"
                       alt="X"
                     />
                   </div>
@@ -121,7 +125,7 @@ function bookDetails(element, id) {
         `;
     } catch (error) {
         res = "";
-        console.log(error);
+        console.log(element);
     }
     return res;
 }
@@ -160,9 +164,6 @@ async function getOnePage(params) {
         throw error
     }
 }
-
-
-
 
 
 function prevPage(){

@@ -10,6 +10,23 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
+    <style>
+      .loader {
+        font-size: 20px;
+        display: inline-block;
+        animation: spin 2s linear infinite;
+        display: none;
+      }
+
+      @keyframes spin {
+        0% {
+          transform: rotate(0deg);
+        }
+        100% {
+          transform: rotate(360deg);
+        }
+      }
+    </style>
   </head>
   <body>
     <nav class="navbar flex-group">
@@ -98,6 +115,14 @@
             <button onclick="addBooks()" class="btn" id="add-books">
               Add (<span id="num-of-books">0</span>)
             </button>
+          </div>
+          <div class="status-container flex-group">
+            <div>
+              <p class="message"></p>
+              <i class="fas fa-spinner loader"></i>
+            </div>
+            <!-- <div class="success"><p class="message">Success</p></div> -->
+            <!-- <div class="failure"><p class="message">Error</p></div> -->
           </div>
           <ul class="flex-group" id="books"></ul>
           <div class="navigate-pages-wrapper">

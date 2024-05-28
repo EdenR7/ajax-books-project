@@ -90,7 +90,7 @@ main {
 }
 
 .web-books-wrapper {
-  display: none;
+  /* display: none; */
   align-items: center;
   flex-direction: column;
 }
@@ -117,6 +117,12 @@ form#search-by-name {
 #add-books {
   visibility: hidden;
   transform: translateX(-3rem);
+}
+
+.status-container {
+  margin-top: 2rem;
+  width: 100%;
+  justify-content: center;
 }
 
 #books {
