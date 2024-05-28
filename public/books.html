@@ -10,23 +10,7 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
     />
-    <style>
-      .loader {
-        font-size: 20px;
-        display: inline-block;
-        animation: spin 2s linear infinite;
-        display: none;
-      }
-
-      @keyframes spin {
-        0% {
-          transform: rotate(0deg);
-        }
-        100% {
-          transform: rotate(360deg);
-        }
-      }
-    </style>
+    <style></style>
   </head>
   <body>
     <nav class="navbar flex-group">
@@ -81,22 +65,49 @@
       <div class="actions-container flex-group">
         <div class="forms-container">
           <form id="add">
-            <label for="title">book name:</label>
-            <input id="title" type="text" name="title" />
-            <label for="authors">book authur:</label>
-            <input id="authors" type="text" name="authors" />
-            <label for="numPages">number of pages:</label>
-            <input id="numPages" type="number" name="numPages" />
-            <label for="description">description:</label>
-            <input id="description" type="text" name="description" />
-            <label for="categories">category/genre:</label>
-            <input id="categories" type="text" name="categories" />
-            <label for="ISBN">ISBN:</label>
-            <input id="ISBN" type="text" name="ISBN" />
-            <label for="imageLink-small">add image link-small:</label>
-            <input id="imageLink-small" type="text" name="imageLink-small" />
-            <label for="imageLink-big">add image link-big:</label>
-            <input id="imageLink-big" type="text" name="imageLink-big" />
+            <div>
+              <label for="title">Book Name:</label>
+              <input id="title" type="text" name="title" />
+            </div>
+            <div>
+              <label for="authors">Book Author:</label>
+              <input id="authors" type="text" name="authors" />
+            </div>
+            <div>
+              <label for="numPages">Number of Pages:</label>
+              <input id="numPages" type="number" name="numPages" />
+            </div>
+            <div>
+              <label for="description">Description:</label>
+              <input id="description" type="text" name="description" />
+            </div>
+            <div>
+              <label for="categories">Category/Genre:</label>
+              <input id="categories" type="text" name="categories" />
+            </div>
+            <div>
+              <label for="ISBN">ISBN:</label>
+              <input id="ISBN" type="text" name="ISBN" />
+            </div>
+            <div>
+              <label for="imageLink-small">Add Image Link - Small:</label>
+              <input
+                placeholder="optional"
+                id="imageLink-small"
+                type="text"
+                name="imageLink-small"
+              />
+            </div>
+            <div>
+              <label for="imageLink-big">Add Image Link - Big:</label>
+              <input
+                placeholder="optional"
+                id="imageLink-big"
+                type="text"
+                name="imageLink-big"
+              />
+            </div>
+            <button class="btn" type="submit">Add Book</button>
           </form>
           <form id="delete"></form>
         </div>
@@ -116,13 +127,8 @@
               Add (<span id="num-of-books">0</span>)
             </button>
           </div>
-          <div class="status-container flex-group">
-            <div>
-              <p class="message"></p>
-              <i class="fas fa-spinner loader"></i>
-            </div>
-            <!-- <div class="success"><p class="message">Success</p></div> -->
-            <!-- <div class="failure"><p class="message">Error</p></div> -->
+          <div class="loader-container">
+            <p class="message"><i class="fas fa-spinner loader"></i></p>
           </div>
           <ul class="flex-group" id="books"></ul>
           <div class="navigate-pages-wrapper">
@@ -134,6 +140,14 @@
             </button>
           </div>
         </div>
+      </div>
+      <div class="success-container status-container">
+        <h4 class="status-title">Operation <span>Done</span></h4>
+      </div>
+      <div class="failure-container status-container">
+        <i onclick="closeFailure()" class="close-btn fa-solid fa-xmark"></i>
+        <h4 class="status-title">Operation <span>Alert</span></h4>
+        <p class="status-desc"></p>
       </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>

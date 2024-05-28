@@ -83,14 +83,73 @@ main {
 }
 /* forms */
 #add {
+  margin-top: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+  max-width: 800px;
+  padding: 1.25rem;
+  background-color: var(--clr-neutral-700);
+  border-radius: 4px;
+  box-shadow: var(--box-shadow-light2);
   display: none;
+}
+
+#add div {
+  display: flex;
+  flex-direction: column;
+}
+
+#add label {
+  margin-bottom: 0.5rem;
+  color: var(--clr-neutral-110);
+  font-weight: bold;
+}
+
+#add input {
+  padding-block: .5rem;
+  padding-inline: 0.75rem;
+  margin-bottom: 0.75rem;
+  border: 1px solid var(--clr-neutral-300);
+  border-radius: 4px;
+  background-color: var(--clr-neutral-100);
+  transition: border-color 0.3s ease;
+}
+
+#add input:focus {
+  border-color: var(--clr-primary-500);
+  box-shadow: var(--box-shadow-light1);
+}
+#add .btn {
+  margin: auto;
+  background-color: var(--clr-primary-500);
+  color: var(--clr-neutral-110);
+  font-weight: 600;
+  width: 200px;
+  grid-column-start: span 2;
+  padding-block: .75rem;
+}
+@media (max-width: 600px) {
+  #add {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+  #add div {
+    margin-bottom: 0;
+  }
+  #add button {
+    display: inline-block;
+    margin: auto;
+    width: 200px;
+    grid-column-start: span 1;
+    padding-block: .5rem;
+  }
 }
 #delete {
   display: none;
 }
 
 .web-books-wrapper {
-  /* display: none; */
+  display: none;
   align-items: center;
   flex-direction: column;
 }
@@ -101,7 +160,6 @@ main {
   margin-top: 2rem;
 }
 form#search-by-name {
-  /* box-shadow: none; */
   gap: 4px;
 }
 
@@ -115,14 +173,28 @@ form#search-by-name {
   padding-inline: 1.25rem;
 }
 #add-books {
-  visibility: hidden;
+  display: none;
   transform: translateX(-3rem);
 }
 
-.status-container {
-  margin-top: 2rem;
-  width: 100%;
-  justify-content: center;
+.loader-container {
+  display: none;
+  transform: translateX(-2rem);
+}
+.loader {
+  font-size: 20px;
+  margin-top: 1rem;
+  display: inline-block;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 #books {
@@ -166,16 +238,3 @@ form#search-by-name {
 .prev {
   visibility: hidden;
 }
-
-/* #add {
-  align-items: center;
-  flex-direction: column;
-  width: 100%;
-  margin-top: 2rem;
-}
-
-.forms-container {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-} */

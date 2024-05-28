@@ -8,46 +8,54 @@ const apiKey = 'AIzaSyCTA9wuo8lvoUDxqDt_WYsebCsbSYoHoUY';
 let currentPage = 1;
 const pageMax = 12;
 const elementsToAdd = [];
+let errorInAddingElements = [];
 
 
 
 //Add new books
-async function addBookToList(event){
+async function addBookToList(event){ // add book to list by click
     const bookId = event.currentTarget.id;
-    elementsToAdd.push(bookId);
-    document.getElementById("num-of-books").innerText = elementsToAdd.length;
-    document.getElementById("add-books").style.visibility="visible";
+    const book = await getOneBookById(bookId);
+    const exists = await check_if_exists(book.data.volumeInfo.title);
+    if (exists || elementsToAdd.includes(bookId)) {
+        displayFailure(`${book.data.volumeInfo.title} already exists!`)
+    } else{
+        elementsToAdd.push(bookId);
+        document.getElementById("num-of-books").innerText = elementsToAdd.length;
+        document.getElementById("add-books").style.display="block";
+    }
 }
-async function addBooks() {
+async function addBooks() { // add the whole books list
     if (document.getElementById("num-of-books").innerText > 0) {
+        errorInAddingElements.length = 0; //reset history of errors
         try {
+            displayLoader();
             for (const bookId of elementsToAdd) {
-                const res = await axios.get(`${googleUrl}/${bookId}`,{
-                    params:{
-                        key: apiKey
-                    }
-                });
-                await addBookToData(res.data.volumeInfo);
+                const res = await getOneBookById(bookId);
+                const element = res.data.volumeInfo;
+                await addBookToData(getElementProperties(element));
             }
-        } catch (error) {
-            
+        if (errorInAddingElements.length == 0) { // error tracking
+            displaySuccess();
+        } else {
+            const errMsg = errorMessageGenerator();
+            displayFailure(errMsg);
         }
+        } catch (error) {
+            displayFailure("Sorry, there was an ERROR in operation");
+        }
+        errorInAddingElements.length = 0;
+        closeLoader();
     }
     elementsToAdd.length = 0;
-    document.getElementById("num-of-books").innerText = elementsToAdd.length;
+    document.getElementById("add-books").style.display="none";
+
 }
-async function addBookToData(element) {
+async function addBookToData(element) { // add a book, if there wan an error it will update
     try {
-        const exists = await check_if_exists(element.title); // boolean by name only
-        if (exists) {
-            console.log("Duplicate book:", element.title);
-        } else {
-            const copies = getRandomNumOfCopies();
-            const elementToPush = getElementProperties(element);
-            const res = await axios.post(booksUrl, elementToPush);
-        }
+        await axios.post(booksUrl, element);
     } catch (error) {
-        console.error('Error adding book:', error);
+        errorInAddingElements.push(element.title);
     }
 }
 function getElementProperties(element) {
@@ -73,7 +81,15 @@ function getElementProperties(element) {
     return res;
 }
 
-async function check_if_exists(title) {
+async function getOneBookById(bookId) { // get a book
+    const res = await axios.get(`${googleUrl}/${bookId}`,{
+        params:{
+            key: apiKey
+        }
+    });
+    return res;
+}
+async function check_if_exists(title) { //Check if the book exists
     try {
         const response = await axios.get(booksUrl);
         const myBooks = response.data;
@@ -86,6 +102,13 @@ async function check_if_exists(title) {
     } catch (error) {
         throw error;
     }
+}
+function errorMessageGenerator() {
+    let resMessage = "Error in attempt to add ";
+    for (const title of errorInAddingElements) {
+        resMessage += `${title}, `;
+    }
+    return resMessage.slice(0, -2);
 }
 
 //Create by web
@@ -131,7 +154,9 @@ function bookDetails(element, id) {
 }
 async function displayBookPage() {
     try {
+        displayLoader()
         const book = await getOnePage(generateParams());
+        closeLoader();
         bookListElement.innerHTML = "";
         document.querySelector(".next").style.visibility = checkIfLastPage(book.totalItems)?"hidden":"visible";
         const booksArray = book.items;
@@ -165,12 +190,107 @@ async function getOnePage(params) {
     }
 }
 
+//manually add 
+const manuallyForm = document.getElementById("add")
+manuallyForm.addEventListener("submit", async (event)=>{
+    event.preventDefault();
+    const data = getFormData();
+    if (validateRequiredFields(data)) {
+       const bookElem = createBookProperties(data);
+       await addBookToData(bookElem);
+       //display success
+       //reset the form
+    } else {
+        // error handle
+    }
+    
+})
+// collect the form data 
+function getFormData() {
+    const formDataElem = new FormData(manuallyForm);
+    const data = {};
+    formDataElem.entries().forEach(element => {
+        data[element[0]] = element[1];
+    });
+    return data;
+}
+// validations
+function validateRequiredFields(data) {
+    for (const key in data) {
+        if (key === "imageLink-small" || key === "imageLink-big") {
+        }else{
+            if (!data[key]) {
+                return false;
+            }
+        }
+    }
+    // design operations, clear fields  
+    return true;
+}
+//convert the data to a ready to insert book
+function createBookProperties(data) {
+    return{
+        title:data.title,
+        authors:data.authors.split(","),
+        numPages:data.numPages,
+        description:data.description,
+        imageLink:{
+            "small":data['imageLink-small'],
+            "big":data['imageLink-big']
+        },
+        categories:data.categories.split(","),
+        ISBN:[{
+            "type": "ISBN_10",
+            "identifier" : data.ISBN
+        }],
+        numOfCopies:getRandomNumOfCopies()
+    }
 
+    //title
+    //authors []
+    //numpages
+    //desc
+    //imageLink {}
+    //categories []
+    //isbn[{"type": "ISBN_10","identifier": "0830879110"}]
+    // num copies
+}
+
+
+
+
+
+function displayLoader() {
+    document.querySelector('.loader-container').style.display = "block";
+}
+function closeLoader() {
+    setTimeout(()=>{
+        document.querySelector('.loader-container').style.display = "none";
+    }, 50)
+}
+function displaySuccess() {
+    const element = document.querySelector('.success-container');
+    element.style.display = "block";
+    setTimeout(()=>{
+        element.style.display = "none";
+    }, 1000)
+}
+function displayFailure(text){
+    const element = document.querySelector('.failure-container');
+    element.style.display = "block";
+    document.querySelector(".status-desc").innerText = text;
+}
+function closeFailure(){
+    document.querySelector('.failure-container').style.display = "none";
+    document.querySelector(".status-desc").innerText = "";
+}
 function prevPage(){
     currentPage -- ;
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     displayBookPage();
 }
 function nextPage(){
+    window.scrollTo({ top: 0, behavior: 'smooth' });
     currentPage ++;
     displayBookPage();
 }
@@ -184,11 +304,15 @@ document.addEventListener('DOMContentLoaded', function () {
     });
     document.getElementById("web").addEventListener("click",()=>{
         document.querySelector(".web-books-wrapper").style.display = "flex";
+        document.getElementById("add").style.display = "none";
+        document.getElementById("delete").style.display = "none";
     });
+    document.querySelector("#manually").addEventListener('click', ()=>{
+        document.querySelector(".web-books-wrapper").style.display = "none";
+        document.getElementById("add").style.display = "grid";
+    })
 });
 
 //forms - only one is open at time
-//Validation:
 //input field, isbn not exist 
-//pop up messages loader
 

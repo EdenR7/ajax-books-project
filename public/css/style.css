@@ -120,3 +120,42 @@ form {
     display: none;
   }
 }
+
+.status-container {
+  color: var(--clr-neutral-110);
+  border-radius: 4px;
+  background-color: var(--clr-neutral-700);
+  padding: 1rem;
+  min-width: 150px;
+  max-width: 300px;
+  position: fixed;
+  bottom: 1rem;
+  right: 1rem;
+  margin-top: 2rem;
+  box-shadow: var(--box-shadow-light2);
+}
+.status-title {
+  font-size: 0.75rem;
+  text-align: center;
+}
+.status-desc{
+  font-size: 0.6rem;
+}
+.status-container .close-btn {
+  font-size: 0.75rem;
+  top: 0.5rem;
+  right: 0.5rem;
+  color: inherit;
+}
+.success-container {
+  display: none;
+}
+.success-container span:first-child {
+  color: hsl(120, 100%, 25%);
+}
+.failure-container {
+  display: none;
+}
+.failure-container span:first-child {
+  color: var(--clr-primary-500);
+}
