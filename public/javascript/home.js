@@ -83,29 +83,29 @@ async function displayBook(bookID) {
   },300);
 }
 function overlayBookDetails(element) {
-    return `
-    <h3 class="title">${element.title}</h3>
-            <p class="author">
-              <span class="key">Authors: </span
-              ><span class="text">${element.authors[0]?element.authors[0]:""}</span>
-            </p>
-            <p class="Category">
-              <span class="key">Category:</span
-              ><span class="text"> ${element.categories}</span>
-            </p>
-            <p class="pages-number">
-              <span class="key">Pages:</span><span class="text"> ${element.numPages}</span>
-            </p>
-            <p class="description">
-              <span class="text">
-                ${element.description}
-              </span>
-            </p>
-            <p class="Identifier">
-              <span class="key">ISBN:</span><span class="text"> ${element.ISBN[0].identifier}</span>
-            </p>
-    `
-    //Update to isbn
+  const firstISBN = element.ISBN && element.ISBN.length > 0 ? element.ISBN[0].identifier : null;
+  return `
+    <h3 class="title">${element.title ? element.title : "Title not available"}</h3>
+    <p class="author">
+      <span class="key">Authors: </span>
+      <span class="text">${element.authors && element.authors.length > 0 ? element.authors[0] : "N/A"}</span>
+    </p>
+    <p class="Category">
+      <span class="key">Category:</span>
+      <span class="text">${element.categories ? element.categories : "N/A"}</span>
+    </p>
+    <p class="pages-number">
+      <span class="key">Pages:</span>
+      <span class="text">${element.numPages ? element.numPages : "N/A"}</span>
+    </p>
+    <p class="description">
+      <span class="text">${element.description ? element.description : "No description available."}</span>
+    </p>
+    <p class="Identifier">
+      <span class="key">ISBN:</span>
+      <span class="text">${firstISBN ? firstISBN : "N/A"}</span>
+    </p>
+  `;
 }
 async function getBookFromDB(id) {
     const response = await axios.get(`${booksUrl}/${id}`);

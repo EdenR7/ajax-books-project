@@ -3,6 +3,7 @@ const btnSearch = document.getElementById("search");
 const addForm = document.getElementById("search-by-name");
 const googleUrl = 'https://www.googleapis.com/books/v1/volumes';
 const booksUrl = 'http://localhost:8001/books';
+const historyUrl = 'http://localhost:8001/history'; 
 const bookListElement = document.getElementById("books");
 const apiKey = 'AIzaSyCTA9wuo8lvoUDxqDt_WYsebCsbSYoHoUY';
 let currentPage = 1;
@@ -53,6 +54,7 @@ async function addBooks() { // add the whole books list
 }
 async function addBookToData(element) { // add a book, if there wan an error it will update
     try {
+        updateHistory("Create", element.title, `${element.title} has been added to the libary`)
         await axios.post(booksUrl, element);
     } catch (error) {
         errorInAddingElements.push(element.title);
@@ -305,7 +307,11 @@ async function searchIsbn(identifier) {
 }
 async function deleteBook(bookId) {
     try {
-        const res = await axios.delete(`${booksUrl}/${bookId}`)
+        const getRes = await axios.get(`${booksUrl}/${bookId}`);
+        const bookName = getRes.data.title;
+        console.log(bookName);
+        updateHistory("Delete", bookName, `${bookName} has been removed from the libary`)
+        await axios.delete(`${booksUrl}/${bookId}`)
         displaySuccess();
     } catch (error) {
         displayFailure("System Error!")
@@ -346,6 +352,22 @@ function nextPage(){
     currentPage ++;
     displayBookPage();
 }
+async function updateHistory(operation, name, comm) {
+    const historyElement = {
+      bookName:name,
+      operationType:operation,
+      comments: comm,
+      operationDate:getCurrentDateTime().date,
+      operationDate:getCurrentDateTime().time
+    }
+    const res = await axios.post(historyUrl, historyElement)
+  }
+  function getCurrentDateTime() {
+    const now = new Date();
+    const date = now.toLocaleDateString();
+    const time = now.toLocaleTimeString();
+    return { date, time };
+  }
 
 const getRandomNumOfCopies = () => Math.floor(Math.random() * 16) + 5;
 document.addEventListener('DOMContentLoaded', function () {
@@ -375,6 +397,6 @@ document.addEventListener('DOMContentLoaded', function () {
     
 });
 
-//forms - only one is open at time
-//input field, isbn not exist 
+
+
 
