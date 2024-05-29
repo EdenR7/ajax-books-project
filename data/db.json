@@ -16319,7 +16319,7 @@
           "identifier": "9781501149900"
         }
       ],
-      "numOfCopies": 13
+      "numOfCopies": 14
     },
     {
       "id": "483a",
@@ -17001,6 +17001,13 @@
       "operationType": "Create",
       "comments": "OMRI Products List has been added to the libary",
       "operationDate": "15:50:27"
+    },
+    {
+      "id": "52cc",
+      "bookName": "Children of Eden",
+      "operationType": "Update",
+      "comments": "Copy has been added (14)",
+      "operationDate": "15:56:04"
     }
   ],
   "favourites": []
