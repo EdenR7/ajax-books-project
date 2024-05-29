@@ -1,6 +1,7 @@
 let currentPage = 1;
 const pageMax = 12;
 const booksUrl = 'http://localhost:8001/books';
+const historyUrl = 'http://localhost:8001/history';
 const bookListElement = document.getElementById("books");
 let searchPaging = false;
 const nextBtn = document.querySelector(".next");
@@ -101,9 +102,10 @@ function overlayBookDetails(element) {
               </span>
             </p>
             <p class="Identifier">
-              <span class="key">ISBN:</span><span class="text"> ${element.id}</span>
+              <span class="key">ISBN:</span><span class="text"> ${element.ISBN[0].identifier}</span>
             </p>
     `
+    //Update to isbn
 }
 async function getBookFromDB(id) {
     const response = await axios.get(`${booksUrl}/${id}`);
@@ -118,7 +120,7 @@ async function addCopy(event){
         numOfCopies: newCopies
       });
     document.querySelector('#book-copies').innerText = newCopies;
-    // ADD HISTORY ACTION
+    updateHistory("Update", book.title, `Copy has been added (${book.numOfCopies+1})`);
 }
 async function removeCopy(event){
     const bookID = event.target.parentElement.parentElement.parentElement.parentElement.getAttribute('identifier');
@@ -129,7 +131,24 @@ async function removeCopy(event){
         numOfCopies: newCopies
       });
     document.querySelector('#book-copies').innerText = newCopies;
-    // ADD HISTORY ACTION
+    updateHistory("Update", book.title, `Copy has been removed (${book.numOfCopies-1})`);
+}
+
+async function updateHistory(operation, name, comm) {
+  const historyElement = {
+    bookName:name,
+    operationType:operation,
+    comments: comm,
+    operationDate:getCurrentDateTime().date,
+    operationDate:getCurrentDateTime().time
+  }
+  const res = await axios.post(historyUrl, historyElement)
+}
+function getCurrentDateTime() {
+  const now = new Date();
+  const date = now.toLocaleDateString();
+  const time = now.toLocaleTimeString();
+  return { date, time };
 }
 
 const closeBtns = document.querySelectorAll(".close-btn");
@@ -141,7 +160,6 @@ closeBtns.forEach((btn=>{
 function displayOverlay(bookID) {
     document.querySelector("main").style.opacity = .5;
     document.querySelector("nav").style.opacity = .5;
-    console.log(document.querySelector("main"));
     document.querySelector(".overlay-container").setAttribute('identifier', bookID);
     document.querySelector(".overlay-container").style.display = "block";
 }
@@ -164,7 +182,6 @@ document.getElementById("search-by-name").addEventListener("submit",async (e)=>{
   const res = await getAllBooks();
   const allBooks = res.data;
   allSearchMatches = allBooks.filter((book)=> book.title.toLowerCase().includes(desiredValue));
-  console.log(allSearchMatches);
   validateSearch();
 })
 function validateSearch() {

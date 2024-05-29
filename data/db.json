@@ -1399,7 +1399,7 @@
           "Study Aids"
         ]
       ],
-      "numOfCopies": 8
+      "numOfCopies": 7
     },
     {
       "id": "2bb2",
@@ -1486,7 +1486,7 @@
           "identifier": "BL:A0025220907"
         }
       ],
-      "numOfCopies": 19
+      "numOfCopies": 23
     },
     {
       "id": "5dc6",
@@ -2389,7 +2389,7 @@
           "identifier": "1317010477"
         }
       ],
-      "numOfCopies": 19
+      "numOfCopies": 16
     },
     {
       "id": "d534",
@@ -2947,7 +2947,7 @@
           "identifier": "3382159082"
         }
       ],
-      "numOfCopies": 5
+      "numOfCopies": 8
     },
     {
       "id": "156b",
@@ -3866,7 +3866,7 @@
           "identifier": "1571318704"
         }
       ],
-      "numOfCopies": 8
+      "numOfCopies": 9
     },
     {
       "id": "d496",
@@ -16213,7 +16213,7 @@
           "identifier": "9781572580275"
         }
       ],
-      "numOfCopies": 16
+      "numOfCopies": 18
     },
     {
       "id": "5625",
@@ -16404,7 +16404,7 @@
           "identifier": "9781496908841"
         }
       ],
-      "numOfCopies": 5
+      "numOfCopies": 6
     },
     {
       "id": "512e",
@@ -16829,16 +16829,95 @@
   ],
   "history": [
     {
-      "bookName": "b",
-      "operationType": "2",
-      "operationDate": "3",
-      "operationTime": "4"
+      "id": "1ae5",
+      "bookName": "From Eden to Eden",
+      "operationType": "Update",
+      "comments": "Copy has been added (17)",
+      "operationDate": "15:19:38"
     },
     {
-      "bookName": "a",
-      "operationType": "2",
-      "operationDate": "3",
-      "operationTime": "4"
+      "id": "019d",
+      "bookName": "Thomas F. Torrance",
+      "operationType": "Update",
+      "comments": "Copy has been added (20)",
+      "operationDate": "15:20:30"
+    },
+    {
+      "id": "2236",
+      "bookName": "Thomas F. Torrance",
+      "operationType": "Update",
+      "comments": "Copy has been added (21)",
+      "operationDate": "15:20:31"
+    },
+    {
+      "id": "c8ff",
+      "bookName": "Davanagere University-Davanagere Ph.D. Entrance Test-Research Aptitude Section Common For All Streams eBook",
+      "operationType": "Update",
+      "comments": "Copy has been removed (7)",
+      "operationDate": "15:20:35"
+    },
+    {
+      "id": "a8e8",
+      "bookName": "The Perplex'd Dutchess: Or, Treachery Rewarded. Being Some Memoirs of the Court of Malfy ... To which is Added, Innocence Preserved: a Novel",
+      "operationType": "Update",
+      "comments": "Copy has been added (20)",
+      "operationDate": "15:21:02"
+    },
+    {
+      "id": "c1a5",
+      "bookName": "The Perplex'd Dutchess: Or, Treachery Rewarded. Being Some Memoirs of the Court of Malfy ... To which is Added, Innocence Preserved: a Novel",
+      "operationType": "Update",
+      "comments": "Copy has been added (21)",
+      "operationDate": "15:21:02"
+    },
+    {
+      "id": "c985",
+      "bookName": "The Perplex'd Dutchess: Or, Treachery Rewarded. Being Some Memoirs of the Court of Malfy ... To which is Added, Innocence Preserved: a Novel",
+      "operationType": "Update",
+      "comments": "Copy has been added (22)",
+      "operationDate": "15:21:02"
+    },
+    {
+      "id": "3d18",
+      "bookName": "The Perplex'd Dutchess: Or, Treachery Rewarded. Being Some Memoirs of the Court of Malfy ... To which is Added, Innocence Preserved: a Novel",
+      "operationType": "Update",
+      "comments": "Copy has been added (23)",
+      "operationDate": "15:21:03"
+    },
+    {
+      "id": "2b19",
+      "bookName": "Thomas F. Torrance",
+      "operationType": "Update",
+      "comments": "Copy has been removed (19)",
+      "operationDate": "15:21:08"
+    },
+    {
+      "id": "bde2",
+      "bookName": "The Experience of Thomas H. Jones",
+      "operationType": "Update",
+      "comments": "Copy has been added (6)",
+      "operationDate": "15:21:15"
+    },
+    {
+      "id": "20ed",
+      "bookName": "The Experience of Thomas H. Jones",
+      "operationType": "Update",
+      "comments": "Copy has been added (7)",
+      "operationDate": "15:21:15"
+    },
+    {
+      "id": "09c0",
+      "bookName": "The Experience of Thomas H. Jones",
+      "operationType": "Update",
+      "comments": "Copy has been added (8)",
+      "operationDate": "15:21:16"
+    },
+    {
+      "id": "111f",
+      "bookName": "I Will Not Leave You Comfortless",
+      "operationType": "Update",
+      "comments": "Copy has been added (9)",
+      "operationDate": "15:21:38"
     }
   ],
   "favourites": []
