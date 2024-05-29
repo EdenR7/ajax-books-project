@@ -151,3 +151,23 @@ input {
     /* Add some space between the table_wrap and the side_bar */
   }
 }
+
+.next {
+  margin-left: 2rem;
+}
+
+.pagination {
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.pagination button:hover {
+  background-color: var(--clr-primary-650);
+}
