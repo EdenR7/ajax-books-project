@@ -10,16 +10,16 @@ const prevBtn = document.querySelector(".prev");
 
 //Display all books
 async function displayBooksPage() {
-    let books;
-    await getPage(currentPage)
+  let books;
+  await getPage(currentPage)
     .then(res => books = res)
-    bookListElement.innerHTML= "";
-    for (const book of books) {
-        bookListElement.innerHTML += `
+  bookListElement.innerHTML = "";
+  for (const book of books) {
+    bookListElement.innerHTML += `
         <li id=${book.id} class="flex-group book" onclick="displayBook(this.id)">
         <div class="book-text flex-group">
           <h3>${book.title}</h3>
-          <p> ${book.authors?`Wriiten by ${book.authors[0]}`:'Anonymus author'}</p>
+          <p> ${book.authors ? `Wriiten by ${book.authors[0]}` : 'Anonymus author'}</p>
         </div>
         <div class="book-img flex-group">
           <img
@@ -28,66 +28,66 @@ async function displayBooksPage() {
           />
         </div>
       </li>`
-    }
+  }
 }
 async function getPage() {
-    currentPage === 1 ? document.querySelector(".prev").style.visibility = "hidden" : document.querySelector(".prev").style.visibility = "visible";
-    const response = await axios.get(`${booksUrl}`, {
-        params: {
-            _page: currentPage,
-            _per_page : pageMax,
-            _sort: 'title',
-            _order: 'desc'
-        }
-        });
-    return response.data.data;
+  currentPage === 1 ? document.querySelector(".prev").style.visibility = "hidden" : document.querySelector(".prev").style.visibility = "visible";
+  const response = await axios.get(`${booksUrl}`, {
+    params: {
+      _page: currentPage,
+      _per_page: pageMax,
+      _sort: 'title',
+      _order: 'desc'
+    }
+  });
+  return response.data.data;
 }
 //Paginote
-async function nextPage(){
-    if (!searchPaging) {
-      currentPage++;
-      await displayBooksPage();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      bookListElement.innerHTML= "";
-      currentPageSearch ++;
-      validateSearch()
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+async function nextPage() {
+  if (!searchPaging) {
+    currentPage++;
+    await displayBooksPage();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    bookListElement.innerHTML = "";
+    currentPageSearch++;
+    validateSearch()
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
 }
-async function prevPage(){
-    if (!searchPaging) {
-      currentPage --;
-      await displayBooksPage();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      bookListElement.innerHTML= "";
-      currentPageSearch --;
-      validateSearch();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+async function prevPage() {
+  if (!searchPaging) {
+    currentPage--;
+    await displayBooksPage();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    bookListElement.innerHTML = "";
+    currentPageSearch--;
+    validateSearch();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
 
 //Overlay functions
 async function displayBook(bookID) {
-    const book = await getBookFromDB(bookID);
-    document.querySelector(".overlay__book-img").innerHTML =`<img
+  const book = await getBookFromDB(bookID);
+  document.querySelector(".overlay__book-img").innerHTML = `<img
     src="${book.imageLink.big}"
     alt=""
-  />` ;  
-  document.querySelector('.overlay__book-details').innerHTML= overlayBookDetails(book);
+  />` ;
+  document.querySelector('.overlay__book-details').innerHTML = overlayBookDetails(book);
   document.querySelector('#book-copies').innerText = book.numOfCopies;
-  setTimeout(()=>{
+  setTimeout(() => {
     displayOverlay(bookID);
-  },300);
+  }, 300);
 }
 function overlayBookDetails(element) {
-    return `
+  return `
     <h3 class="title">${element.title}</h3>
             <p class="author">
               <span class="key">Authors: </span
-              ><span class="text">${element.authors[0]?element.authors[0]:""}</span>
+              ><span class="text">${element.authors[0] ? element.authors[0] : ""}</span>
             </p>
             <p class="Category">
               <span class="key">Category:</span
@@ -105,42 +105,42 @@ function overlayBookDetails(element) {
               <span class="key">ISBN:</span><span class="text"> ${element.ISBN[0].identifier}</span>
             </p>
     `
-    //Update to isbn
+  //Update to isbn
 }
 async function getBookFromDB(id) {
-    const response = await axios.get(`${booksUrl}/${id}`);
-    return response.data;
+  const response = await axios.get(`${booksUrl}/${id}`);
+  return response.data;
 }
-async function addCopy(event){
-    const bookID = event.target.parentElement.parentElement.parentElement.parentElement.getAttribute('identifier');
-    const getResponse = await axios.get(`${booksUrl}/${bookID}`);
-    const book = getResponse.data;
-    const newCopies = book.numOfCopies + 1;
-    const patchResponse = await axios.patch(`${booksUrl}/${bookID}`, {
-        numOfCopies: newCopies
-      });
-    document.querySelector('#book-copies').innerText = newCopies;
-    updateHistory("Update", book.title, `Copy has been added (${book.numOfCopies+1})`);
+async function addCopy(event) {
+  const bookID = event.target.parentElement.parentElement.parentElement.parentElement.getAttribute('identifier');
+  const getResponse = await axios.get(`${booksUrl}/${bookID}`);
+  const book = getResponse.data;
+  const newCopies = book.numOfCopies + 1;
+  const patchResponse = await axios.patch(`${booksUrl}/${bookID}`, {
+    numOfCopies: newCopies
+  });
+  document.querySelector('#book-copies').innerText = newCopies;
+  updateHistory("Update", book.title, `Copy has been added (${book.numOfCopies + 1})`);
 }
-async function removeCopy(event){
-    const bookID = event.target.parentElement.parentElement.parentElement.parentElement.getAttribute('identifier');
-    const getResponse = await axios.get(`${booksUrl}/${bookID}`);
-    const book = getResponse.data;
-    const newCopies = book.numOfCopies - 1;
-    const patchResponse = await axios.patch(`${booksUrl}/${bookID}`, {
-        numOfCopies: newCopies
-      });
-    document.querySelector('#book-copies').innerText = newCopies;
-    updateHistory("Update", book.title, `Copy has been removed (${book.numOfCopies-1})`);
+async function removeCopy(event) {
+  const bookID = event.target.parentElement.parentElement.parentElement.parentElement.getAttribute('identifier');
+  const getResponse = await axios.get(`${booksUrl}/${bookID}`);
+  const book = getResponse.data;
+  const newCopies = book.numOfCopies - 1;
+  const patchResponse = await axios.patch(`${booksUrl}/${bookID}`, {
+    numOfCopies: newCopies
+  });
+  document.querySelector('#book-copies').innerText = newCopies;
+  updateHistory("Update", book.title, `Copy has been removed (${book.numOfCopies - 1})`);
 }
 
 async function updateHistory(operation, name, comm) {
   const historyElement = {
-    bookName:name,
-    operationType:operation,
+    bookName: name,
+    operationType: operation,
     comments: comm,
-    operationDate:getCurrentDateTime().date,
-    operationDate:getCurrentDateTime().time
+    operationDate: getCurrentDateTime().date,
+    operationDate: getCurrentDateTime().time
   }
   const res = await axios.post(historyUrl, historyElement)
 }
@@ -152,46 +152,46 @@ function getCurrentDateTime() {
 }
 
 const closeBtns = document.querySelectorAll(".close-btn");
-closeBtns.forEach((btn=>{
-    btn.addEventListener('click', ()=>{
-        closeOverlay();
-    })
+closeBtns.forEach((btn => {
+  btn.addEventListener('click', () => {
+    closeOverlay();
+  })
 }))
 function displayOverlay(bookID) {
-    document.querySelector("main").style.opacity = .5;
-    document.querySelector("nav").style.opacity = .5;
-    document.querySelector(".overlay-container").setAttribute('identifier', bookID);
-    document.querySelector(".overlay-container").style.display = "block";
+  document.querySelector("main").style.opacity = .5;
+  document.querySelector("nav").style.opacity = .5;
+  document.querySelector(".overlay-container").setAttribute('identifier', bookID);
+  document.querySelector(".overlay-container").style.display = "block";
 }
 function closeOverlay() {
-    document.querySelector("main").style.opacity = 1;
-    document.querySelector("nav").style.opacity = 1;
-    document.querySelector(".overlay-container").style.display = "none";
-    document.querySelector(".overlay-container").removeAttribute('identifier');
+  document.querySelector("main").style.opacity = 1;
+  document.querySelector("nav").style.opacity = 1;
+  document.querySelector(".overlay-container").style.display = "none";
+  document.querySelector(".overlay-container").removeAttribute('identifier');
 }
 
 let allSearchMatches = [];
-let currentPageSearch = 0 ;
-document.getElementById("search-by-name").addEventListener("submit",async (e)=>{
+let currentPageSearch = 0;
+document.getElementById("search-by-name").addEventListener("submit", async (e) => {
   e.preventDefault();
   searchPaging = true;
   allSearchMatches.length = 0;
   currentPageSearch = 0;
   const desiredValue = document.querySelector("#search-name").value.toLowerCase();
-  bookListElement.innerHTML= "";
+  bookListElement.innerHTML = "";
   const res = await getAllBooks();
   const allBooks = res.data;
-  allSearchMatches = allBooks.filter((book)=> book.title.toLowerCase().includes(desiredValue));
+  allSearchMatches = allBooks.filter((book) => book.title.toLowerCase().includes(desiredValue));
   validateSearch();
 })
 function validateSearch() {
-  prevBtn.style.visibility = currentPageSearch === 0 ?"hidden":"visible"; 
-  nextBtn.style.display = currentPageSearch > (allSearchMatches.length/pageMax)-1 ? "none": "inline-block";
+  prevBtn.style.visibility = currentPageSearch === 0 ? "hidden" : "visible";
+  nextBtn.style.display = currentPageSearch > (allSearchMatches.length / pageMax) - 1 ? "none" : "inline-block";
   const n = allSearchMatches.length;
-  let startBook = pageMax*currentPageSearch;
-  const lastBook = pageMax*(currentPageSearch+1);
-  if (n>startBook) {
-    const indicator = n>lastBook?lastBook:n;
+  let startBook = pageMax * currentPageSearch;
+  const lastBook = pageMax * (currentPageSearch + 1);
+  if (n > startBook) {
+    const indicator = n > lastBook ? lastBook : n;
     while (startBook < indicator) {
       const element = allSearchMatches[startBook];
       displaySearchedBook(element);
@@ -206,7 +206,7 @@ function displaySearchedBook(book) {
         <li id=${book.id} class="flex-group book" onclick="displayBook(this.id)">
         <div class="book-text flex-group">
           <h3>${book.title}</h3>
-          <p> ${book.authors?`Wriiten by ${book.authors[0]}`:'Anonymus author'}</p>
+          <p> ${book.authors ? `Wriiten by ${book.authors[0]}` : 'Anonymus author'}</p>
         </div>
         <div class="book-img flex-group">
           <img
@@ -222,10 +222,10 @@ async function getAllBooks() {
 }
 
 // default actions of dom
-document.addEventListener('DOMContentLoaded', function() {
-    const categorySelectWrapper = document.querySelector('.category-select-wrapper');
-    const selectElement = categorySelectWrapper.querySelector('select');
-    categorySelectWrapper.innerHTML += `
+document.addEventListener('DOMContentLoaded', function () {
+  const categorySelectWrapper = document.querySelector('.category-select-wrapper');
+  const selectElement = categorySelectWrapper.querySelector('select');
+  categorySelectWrapper.innerHTML += `
         <div class="category-select-styled">${selectElement.options[0].text}</div>
         <div class="category-select-options">
             ${Array.from(selectElement.options).map(option => `
@@ -233,26 +233,26 @@ document.addEventListener('DOMContentLoaded', function() {
             `).join('')}
         </div>
     `;
-    const categorySelectStyled = categorySelectWrapper.querySelector('.category-select-styled');
-    const categorySelectOptions = categorySelectWrapper.querySelector('.category-select-options');
-    categorySelectStyled.addEventListener('click', () => {
-        categorySelectWrapper.classList.toggle('open');
-    });
+  const categorySelectStyled = categorySelectWrapper.querySelector('.category-select-styled');
+  const categorySelectOptions = categorySelectWrapper.querySelector('.category-select-options');
+  categorySelectStyled.addEventListener('click', () => {
+    categorySelectWrapper.classList.toggle('open');
+  });
 
-    categorySelectOptions.querySelectorAll('div').forEach(optionDiv => {
-        optionDiv.addEventListener('click', () => {
-            categorySelectStyled.textContent = optionDiv.textContent;
-            selectElement.value = optionDiv.getAttribute('data-value');
-            categorySelectWrapper.classList.remove('open');
-            categorySelectWrapper.setAttribute('data-value', optionDiv.textContent);
-        });
+  categorySelectOptions.querySelectorAll('div').forEach(optionDiv => {
+    optionDiv.addEventListener('click', () => {
+      categorySelectStyled.textContent = optionDiv.textContent;
+      selectElement.value = optionDiv.getAttribute('data-value');
+      categorySelectWrapper.classList.remove('open');
+      categorySelectWrapper.setAttribute('data-value', optionDiv.textContent);
     });
+  });
 
-    displayBooksPage();
+  displayBooksPage();
 });
 
 //paginate end
-//Check if there is a ibsn 
+//Check if there is a ibsn
 //pop up messages - loader...
 // filter categories
 //option to delete book

@@ -1,132 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-    />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>myBooks</title>
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/home.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-  </head>
-  <body>
-    <div class="overlay-container">
-      <div class="book__pop-up grid-group">
-        <i class="close-btn fa-solid fa-xmark"></i>
-        <div class="overlay__book-img flex-group">
-          <img
-            src="http://books.google.com/books/content?id=7XyQuAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
-            alt=""
-          />
-        </div>
-        <div class="overlay__book-details flex-group">
-          <h3 class="title">Harry Potter and the Deathly Hallows</h3>
-          <p class="author">
-            <span class="key">Authors: </span
-            ><span class="text">J. K. Rowling</span>
-          </p>
-          <p class="Category">
-            <span class="key">Category:</span
-            ><span class="text"> Bildungsromans</span>
-          </p>
-          <p class="pages-number">
-            <span class="key">Pages:</span><span class="text"> 870</span>
-          </p>
-          <p class="description">
-            <span class="text">
-              "/"The final adventure in J.K. Rowling's phenomenal, best-selling
-              Harry Potter book series/"--Provided by publisher."
-            </span>
-          </p>
-          <p class="Identifier">
-            <span class="key">ISBN:</span><span class="text"> 0780797086</span>
-          </p>
-        </div>
-        <div class="overlay__book-actions flex-group">
-          <div class="num-copies-manipulations flex-group">
-            <i
-              onclick="removeCopy(event)"
-              id="decrement-copies"
-              class="fa-solid fa-minus"
-            ></i>
-            Current<span id="book-copies">5</span> Copies
-            <i
-              onclick="addCopy(event)"
-              id="increment-copies"
-              class="fa-solid fa-plus"
-            ></i>
-          </div>
+
+<head>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>myBooks</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/home.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
+
+<body>
+  <div class="overlay-container">
+    <div class="book__pop-up grid-group">
+      <i class="close-btn fa-solid fa-xmark"></i>
+      <div class="overlay__book-img flex-group">
+        <img src="http://books.google.com/books/content?id=7XyQuAAACAAJ&printsec=frontcover&img=1&zoom=1&source=gbs_api"
+          alt="" />
+      </div>
+      <div class="overlay__book-details flex-group">
+        <h3 class="title">Harry Potter and the Deathly Hallows</h3>
+        <p class="author">
+          <span class="key">Authors: </span><span class="text">J. K. Rowling</span>
+        </p>
+        <p class="Category">
+          <span class="key">Category:</span><span class="text"> Bildungsromans</span>
+        </p>
+        <p class="pages-number">
+          <span class="key">Pages:</span><span class="text"> 870</span>
+        </p>
+        <p class="description">
+          <span class="text">
+            "/"The final adventure in J.K. Rowling's phenomenal, best-selling
+            Harry Potter book series/"--Provided by publisher."
+          </span>
+        </p>
+        <p class="Identifier">
+          <span class="key">ISBN:</span><span class="text"> 0780797086</span>
+        </p>
+      </div>
+      <div class="overlay__book-actions flex-group">
+        <div class="num-copies-manipulations flex-group">
+          <i onclick="removeCopy(event)" id="decrement-copies" class="fa-solid fa-minus"></i>
+          Current<span id="book-copies">5</span> Copies
+          <i onclick="addCopy(event)" id="increment-copies" class="fa-solid fa-plus"></i>
         </div>
       </div>
     </div>
-    <nav class="navbar flex-group">
-      <div class="navbar-brand">
-        <h3>myBooks</h3>
+  </div>
+  <nav class="navbar flex-group">
+    <div class="navbar-brand">
+      <h3>myBooks</h3>
+    </div>
+    <ul class="navbar-options flex-group">
+      <li>
+        <a class="current-page" href="#"><i class="fa-solid fa-house"></i>
+          <span class="icon-text">Home</span></a>
+      </li>
+      <li>
+        <a href="history.html"><i class="fa-solid fa-landmark"></i>
+          <span class="icon-text">History</span></a>
+      </li>
+      <li>
+        <a href="#"><i class="fa-regular fa-star"></i>
+          <span class="icon-text">Favourites</span></a>
+      </li>
+      <li>
+        <a href="books.html"><i class="fa-solid fa-magnifying-glass"></i>
+          <span class="icon-text"> All Books</span></a>
+      </li>
+    </ul>
+  </nav>
+  <main>
+    <div class="flex-group search-book">
+      <form class="flex-group" id="search-by-name">
+        <input id="search-name" type="text" placeholder="Search by name.." />
+        <button class="btn" type="submit">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+      </form>
+      <div class="category-select-wrapper">
+        <select class="category-select">
+          <option value="0">Sort by category</option>
+          <option value="1">Option 1</option>
+          <option value="2">Option 2</option>
+          <option value="3">Option 3</option>
+          <option value="4">Option 4</option>
+        </select>
       </div>
-      <ul class="navbar-options flex-group">
-        <li>
-          <a class="current-page" href="#"
-            ><i class="fa-solid fa-house"></i>
-            <span class="icon-text">Home</span></a
-          >
-        </li>
-        <li>
-          <a href="history.html"
-            ><i class="fa-solid fa-landmark"></i>
-            <span class="icon-text">History</span></a
-          >
-        </li>
-        <li>
-          <a href="#"
-            ><i class="fa-regular fa-star"></i>
-            <span class="icon-text">Favourites</span></a
-          >
-        </li>
-        <li>
-          <a href="books.html"
-            ><i class="fa-solid fa-magnifying-glass"></i>
-            <span class="icon-text"> All Books</span></a
-          >
-        </li>
-      </ul>
-    </nav>
-    <main>
-      <div class="flex-group search-book">
-        <form class="flex-group" id="search-by-name">
-          <input id="search-name" type="text" placeholder="Search by name.." />
-          <button class="btn" type="submit">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
-        </form>
-        <div class="category-select-wrapper">
-          <select class="category-select">
-            <option value="0">Sort by category</option>
-            <option value="1">Option 1</option>
-            <option value="2">Option 2</option>
-            <option value="3">Option 3</option>
-            <option value="4">Option 4</option>
-          </select>
-        </div>
+    </div>
+    <div class="books-wrapper flex-group">
+      <ul class="flex-group" id="books"></ul>
+      <div class="navigate-pages-wrapper">
+        <button class="prev btn" onclick="prevPage()">
+          <i class="arrow fa-solid fa-arrow-left"></i> prev
+        </button>
+        <button class="next btn" onclick="nextPage()">
+          next <i class="arrow fa-solid fa-arrow-right"></i>
+        </button>
       </div>
-      <div class="books-wrapper flex-group">
-        <ul class="flex-group" id="books"></ul>
-        <div class="navigate-pages-wrapper">
-          <button class="prev btn" onclick="prevPage()">
-            <i class="arrow fa-solid fa-arrow-left"></i> prev
-          </button>
-          <button class="next btn" onclick="nextPage()">
-            next <i class="arrow fa-solid fa-arrow-right"></i>
-          </button>
-        </div>
-      </div>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
-    <script src="javascript/home.js"></script>
-  </body>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+  <script src="javascript/home.js"></script>
+</body>
+
 </html>

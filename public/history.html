@@ -1,87 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>myBooks</title>
-    <link rel="stylesheet" href="css/history.css" />
-    <link rel="stylesheet" href="css/style.css" />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-    />
-  </head>
 
-  <body>
-    <nav class="navbar flex-group">
-      <div class="navbar-brand">
-        <h3>myBooks</h3>
-      </div>
-      <ul class="navbar-options flex-group">
-        <li>
-          <a href="home.html"><i class="fa-solid fa-house"></i> Home</a>
-        </li>
-        <li>
-          <a class="current-page" href="#"
-            ><i class="fa-solid fa-landmark"></i> History</a
-          >
-        </li>
-        <li>
-          <a href="#"><i class="fa-regular fa-star"></i> Favourites</a>
-        </li>
-        <li>
-          <a href="#"><i class="fa-solid fa-magnifying-glass"></i> All Books</a>
-        </li>
-      </ul>
-    </nav>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>myBooks</title>
+  <link rel="stylesheet" href="css/history.css" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+</head>
 
-    <div class="main-content flex-group">
-      <div class="table_wrap">
-        <h1>Actions History:</h1>
-        <table>
-          <thead>
-            <tr>
-              <th>Book Name</th>
-              <th>Operation Type</th>
-              <th>Operation Date</th>
-              <th>Operation Time</th>
-            </tr>
-          </thead>
-          <tbody id="history-body"></tbody>
-        </table>
-        <div id="pagination-container">
-          <div class="pagination">
-            <button id="prev-btn">previous</button>
-            <button id="next-btn">next</button>
-          </div>
+<body>
+  <nav class="navbar flex-group">
+    <div class="navbar-brand">
+      <h3>myBooks</h3>
+    </div>
+    <ul class="navbar-options flex-group">
+      <li>
+        <a href="home.html"><i class="fa-solid fa-house"></i> Home</a>
+      </li>
+      <li>
+        <a class="current-page" href="#"><i class="fa-solid fa-landmark"></i> History</a>
+      </li>
+      <li>
+        <a href="#"><i class="fa-regular fa-star"></i> Favourites</a>
+      </li>
+      <li>
+        <a href="#"><i class="fa-solid fa-magnifying-glass"></i> All Books</a>
+      </li>
+    </ul>
+  </nav>
+
+  <div class="main-content flex-group">
+    <div class="table_wrap">
+      <h1>Actions History:</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>Book Name</th>
+            <th>Operation Type</th>
+            <th>Operation Date</th>
+            <th>Operation Time</th>
+          </tr>
+        </thead>
+        <tbody id="history-body"></tbody>
+      </table>
+      <div id="pagination-container">
+        <div class="pagination">
+          <button id="prev-btn">previous</button>
+          <button id="next-btn">next</button>
         </div>
       </div>
-
-      <div class="side_bar">
-        <h2>Sort history results by:</h2>
-        <ul>
-          <li>
-            <label for="category-select">by category</label>
-            <select id="category-select">
-              <option value="fiction">Fiction</option>
-              <option value="non-fiction">Non-Fiction</option>
-              <option value="mystery">Mystery</option>
-              <option value="fantasy">Fantasy</option>
-              <option value="science-fiction">Science Fiction</option>
-            </select>
-          </li>
-          <li>
-            alphabetical
-            <button id="sort-alphabetical">Sort</button>
-          </li>
-        </ul>
-      </div>
     </div>
-    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
-    <script src="javascript/history.js"></script>
-  </body>
+
+    <div class="side_bar">
+      <h2>Sort history results by:</h2>
+      <ul>
+        <li>
+          <label for="category-select">by category</label>
+          <select id="category-select">
+            <option value="fiction">Fiction</option>
+            <option value="non-fiction">Non-Fiction</option>
+            <option value="mystery">Mystery</option>
+            <option value="fantasy">Fantasy</option>
+            <option value="science-fiction">Science Fiction</option>
+          </select>
+        </li>
+        <li>
+          alphabetical
+          <button id="sort-alphabetical">Sort</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+  <script src="javascript/history.js"></script>
+</body>
+
 </html>
