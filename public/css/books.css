@@ -81,6 +81,10 @@ main {
   grid-row-start: 2;
   justify-content: center;
 }
+.forms-container {
+  flex-direction: column;
+  align-items: center;
+}
 /* forms */
 #add {
   margin-top: 2rem;
@@ -106,7 +110,7 @@ main {
 }
 
 #add input {
-  padding-block: .5rem;
+  padding-block: 0.5rem;
   padding-inline: 0.75rem;
   margin-bottom: 0.75rem;
   border: 1px solid var(--clr-neutral-300);
@@ -126,7 +130,7 @@ main {
   font-weight: 600;
   width: 200px;
   grid-column-start: span 2;
-  padding-block: .75rem;
+  padding-block: 0.75rem;
 }
 @media (max-width: 600px) {
   #add {
@@ -136,17 +140,28 @@ main {
   #add div {
     margin-bottom: 0;
   }
-  #add button {
+  #add .btn {
     display: inline-block;
     margin: auto;
     width: 200px;
-    grid-column-start: span 1;
-    padding-block: .5rem;
+    grid-column-start: 1;
+    padding-block: 0.5rem;
   }
 }
 #delete {
   display: none;
+
 }
+#delete-isbn{
+  padding-block: .75rem;
+  padding-inline: 1.25rem;
+  width: 70%;
+  max-width: 400px;
+}
+#delete i{
+  padding: .5rem;
+}
+
 
 .web-books-wrapper {
   display: none;
@@ -175,17 +190,6 @@ form#search-by-name {
 #add-books {
   display: none;
   transform: translateX(-3rem);
-}
-
-.loader-container {
-  display: none;
-  transform: translateX(-2rem);
-}
-.loader {
-  font-size: 20px;
-  margin-top: 1rem;
-  display: inline-block;
-  animation: spin 2.5s linear infinite;
 }
 
 @keyframes spin {
@@ -237,4 +241,14 @@ form#search-by-name {
 }
 .prev {
   visibility: hidden;
+}
+.loader-container {
+  display: none;
+  transform: translateX(-2rem);
+}
+.loader {
+  font-size: 20px;
+  margin-top: 1rem;
+  display: inline-block;
+  animation: spin 2.5s linear infinite;
 }

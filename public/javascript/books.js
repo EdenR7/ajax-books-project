@@ -29,7 +29,7 @@ async function addBooks() { // add the whole books list
     if (document.getElementById("num-of-books").innerText > 0) {
         errorInAddingElements.length = 0; //reset history of errors
         try {
-            displayLoader();
+            displayLoader(document.querySelector(".web-books-wrapper"));
             for (const bookId of elementsToAdd) {
                 const res = await getOneBookById(bookId);
                 const element = res.data.volumeInfo;
@@ -45,7 +45,7 @@ async function addBooks() { // add the whole books list
             displayFailure("Sorry, there was an ERROR in operation");
         }
         errorInAddingElements.length = 0;
-        closeLoader();
+        closeLoader(document.querySelector(".web-books-wrapper"));
     }
     elementsToAdd.length = 0;
     document.getElementById("add-books").style.display="none";
@@ -76,7 +76,6 @@ function getElementProperties(element) {
             numOfCopies: copies
         };
     } catch (error) {
-        console.log(element);
     }
     return res;
 }
@@ -91,10 +90,12 @@ async function getOneBookById(bookId) { // get a book
 }
 async function check_if_exists(title) { //Check if the book exists
     try {
+        
         const response = await axios.get(booksUrl);
         const myBooks = response.data;
         for (const book of myBooks) {
             if (book.title.toLowerCase() === title.toLowerCase()) {
+                
                 return true;
             }
         }
@@ -106,7 +107,7 @@ async function check_if_exists(title) { //Check if the book exists
 function errorMessageGenerator() {
     let resMessage = "Error in attempt to add ";
     for (const title of errorInAddingElements) {
-        resMessage += `${title}, `;
+        resMessage += `"${title}", `;
     }
     return resMessage.slice(0, -2);
 }
@@ -148,15 +149,14 @@ function bookDetails(element, id) {
         `;
     } catch (error) {
         res = "";
-        console.log(element);
     }
     return res;
 }
 async function displayBookPage() {
     try {
-        displayLoader()
+        displayLoader(document.querySelector(".web-books-wrapper"));
         const book = await getOnePage(generateParams());
-        closeLoader();
+        closeLoader(document.querySelector(".web-books-wrapper"));
         bookListElement.innerHTML = "";
         document.querySelector(".next").style.visibility = checkIfLastPage(book.totalItems)?"hidden":"visible";
         const booksArray = book.items;
@@ -166,7 +166,7 @@ async function displayBookPage() {
         }
         currentPage === 1 ? document.querySelector(".prev").style.visibility = "hidden" : document.querySelector(".prev").style.visibility = "visible";
     } catch (error) {
-        throw error
+        throw error;
     }
 }
 function generateParams() {
@@ -193,16 +193,30 @@ async function getOnePage(params) {
 //manually add 
 const manuallyForm = document.getElementById("add")
 manuallyForm.addEventListener("submit", async (event)=>{
-    event.preventDefault();
-    const data = getFormData();
-    if (validateRequiredFields(data)) {
-       const bookElem = createBookProperties(data);
-       await addBookToData(bookElem);
-       //display success
-       //reset the form
-    } else {
-        // error handle
+    try {
+        errorInAddingElements.length = 0;
+        event.preventDefault();
+        const data = getFormData();
+        if (validateRequiredFields(data)) {
+        const bookElem = createBookProperties(data);
+        displayLoader(document.querySelector(".forms-container"));
+        const isDup = await check_if_exists(bookElem.title);
+        if (!isDup) {
+            await addBookToData(bookElem);
+            displaySuccess();
+            event.target.reset();
+        } else{
+            errorInAddingElements.push(bookElem.title)
+            displayFailure(errorMessageGenerator());
+        }        
+        } else {
+            displayFailure("Please fill all the req FIELDS");
+        }
+    } catch (error) {
+        displayFailure("Sorry, there was an ERROR in operation");
     }
+    
+    closeLoader(document.querySelector(".forms-container"));
     
 })
 // collect the form data 
@@ -256,16 +270,54 @@ function createBookProperties(data) {
     // num copies
 }
 
-
-
-
-
-function displayLoader() {
-    document.querySelector('.loader-container').style.display = "block";
+//manually delete 
+document.querySelector("#delete").addEventListener("submit", async (e)=>{
+    try {
+        e.preventDefault();
+        const desiredIsbn = document.querySelector("#delete-isbn").value;
+        displayLoader(document.querySelector(".forms-container"));
+        const response = await searchIsbn(desiredIsbn);
+        if (response) {
+            deleteBook(response.id);
+        } else {
+            displayFailure(`Error! ${desiredIsbn} dont exist in system!`);
+        }
+        e.target.reset();
+    } catch (error) {
+        displayFailure(`System Error!`);
+    }
+    closeLoader(document.querySelector(".forms-container"));
+})
+async function searchIsbn(identifier) {
+    const res = await axios.get(booksUrl);
+    const booksArray = res.data;
+    for (const book of booksArray) {
+        const bookIsbns = book.ISBN;
+        if (bookIsbns && bookIsbns.length>0) {
+            for (const isbn of bookIsbns) {
+                if (isbn.identifier == identifier) {
+                    return book;
+                }
+            }
+        } 
+    }
+    return;
 }
-function closeLoader() {
+async function deleteBook(bookId) {
+    try {
+        const res = await axios.delete(`${booksUrl}/${bookId}`)
+        displaySuccess();
+    } catch (error) {
+        displayFailure("System Error!")
+    }
+}
+
+function displayLoader(element) {
+    element.querySelector('.loader-container').style.display = "block";
+}
+function closeLoader(element) {
     setTimeout(()=>{
-        document.querySelector('.loader-container').style.display = "none";
+        element.querySelector('.loader-container').style.display = "none";
     }, 50)
 }
 function displaySuccess() {
@@ -301,6 +353,9 @@ document.addEventListener('DOMContentLoaded', function () {
     const addNewBookBtn = document.querySelector('.side-bar li:nth-child(3)');
     addNewBookBtn.addEventListener('click', function () {
         addBtnsContainer.style.visibility = 'visible'; 
+        document.getElementById("add").style.display = "none";
+        document.getElementById("delete").style.display = "none";
+
     });
     document.getElementById("web").addEventListener("click",()=>{
         document.querySelector(".web-books-wrapper").style.display = "flex";
@@ -310,7 +365,14 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector("#manually").addEventListener('click', ()=>{
         document.querySelector(".web-books-wrapper").style.display = "none";
         document.getElementById("add").style.display = "grid";
+    });
+    document.querySelector('.side-bar li:nth-child(2)').addEventListener('click',()=>{
+        addBtnsContainer.style.visibility = 'hidden'; 
+        document.querySelector("#delete ").style.display = "block";
+        document.querySelector(".web-books-wrapper").style.display = "none";
+        document.getElementById("add").style.display = "none";
     })
+    
 });
 
 //forms - only one is open at time

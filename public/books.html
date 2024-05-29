@@ -63,7 +63,10 @@
         </div>
       </div>
       <div class="actions-container flex-group">
-        <div class="forms-container">
+        <div class="forms-container flex-group">
+          <div class="loader-container">
+            <p class="message"><i class="fas fa-spinner loader"></i></p>
+          </div>
           <form id="add">
             <div>
               <label for="title">Book Name:</label>
@@ -109,7 +112,12 @@
             </div>
             <button class="btn" type="submit">Add Book</button>
           </form>
-          <form id="delete"></form>
+          <form id="delete">
+            <input id="delete-isbn" type="text" placeholder="Enter ISBN..." />
+            <button id="delete-submit" class="btn" type="submit">
+              <i class="fa-regular fa-trash-can"></i>
+            </button>
+          </form>
         </div>
         <div class="web-books-wrapper flex-group">
           <div class="flex-group search-book">
