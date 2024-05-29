@@ -15965,7 +15965,7 @@
           "identifier": "1943149364"
         }
       ],
-      "numOfCopies": 7
+      "numOfCopies": 8
     },
     {
       "id": "b179",
@@ -16829,16 +16829,16 @@
   ],
   "history": [
     {
-      "bookName":"b",
-      "operationType":"2",
-      "operationDate":"3",
-      "operationTime":"4"
+      "bookName": "b",
+      "operationType": "2",
+      "operationDate": "3",
+      "operationTime": "4"
     },
     {
-      "bookName":"a",
-      "operationType":"2",
-      "operationDate":"3",
-      "operationTime":"4"
+      "bookName": "a",
+      "operationType": "2",
+      "operationDate": "3",
+      "operationTime": "4"
     }
   ],
   "favourites": []
