@@ -2,7 +2,9 @@ let currentPage = 1;
 const pageMax = 12;
 const booksUrl = 'http://localhost:8001/books';
 const bookListElement = document.getElementById("books");
-
+let searchPaging = false;
+const nextBtn = document.querySelector(".next");
+const prevBtn = document.querySelector(".prev");
 
 
 //Display all books
@@ -10,7 +12,7 @@ async function displayBooksPage() {
     let books;
     await getPage(currentPage)
     .then(res => books = res)
-    bookListElement.innerHTML= ""
+    bookListElement.innerHTML= "";
     for (const book of books) {
         bookListElement.innerHTML += `
         <li id=${book.id} class="flex-group book" onclick="displayBook(this.id)">
@@ -41,15 +43,29 @@ async function getPage() {
 }
 //Paginote
 async function nextPage(){
-    currentPage++;
-    await displayBooksPage();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (!searchPaging) {
+      currentPage++;
+      await displayBooksPage();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      bookListElement.innerHTML= "";
+      currentPageSearch ++;
+      validateSearch()
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
 }
 async function prevPage(){
-    currentPage --;
-    await displayBooksPage();
-    window.scrollTo({ top: 0, behavior: 'smooth' });
+    if (!searchPaging) {
+      currentPage --;
+      await displayBooksPage();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      bookListElement.innerHTML= "";
+      currentPageSearch --;
+      validateSearch();
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 }
 
 //Overlay functions
@@ -136,6 +152,57 @@ function closeOverlay() {
     document.querySelector(".overlay-container").removeAttribute('identifier');
 }
 
+let allSearchMatches = [];
+let currentPageSearch = 0 ;
+document.getElementById("search-by-name").addEventListener("submit",async (e)=>{
+  e.preventDefault();
+  searchPaging = true;
+  allSearchMatches.length = 0;
+  currentPageSearch = 0;
+  const desiredValue = document.querySelector("#search-name").value.toLowerCase();
+  bookListElement.innerHTML= "";
+  const res = await getAllBooks();
+  const allBooks = res.data;
+  allSearchMatches = allBooks.filter((book)=> book.title.toLowerCase().includes(desiredValue));
+  console.log(allSearchMatches);
+  validateSearch();
+})
+function validateSearch() {
+  prevBtn.style.visibility = currentPageSearch === 0 ?"hidden":"visible"; 
+  nextBtn.style.display = currentPageSearch > (allSearchMatches.length/pageMax)-1 ? "none": "inline-block";
+  const n = allSearchMatches.length;
+  let startBook = pageMax*currentPageSearch;
+  const lastBook = pageMax*(currentPageSearch+1);
+  if (n>startBook) {
+    const indicator = n>lastBook?lastBook:n;
+    while (startBook < indicator) {
+      const element = allSearchMatches[startBook];
+      displaySearchedBook(element);
+      startBook++;
+    }
+  } else {
+    // alert Message
+  }
+}
+function displaySearchedBook(book) {
+  bookListElement.innerHTML += `
+        <li id=${book.id} class="flex-group book" onclick="displayBook(this.id)">
+        <div class="book-text flex-group">
+          <h3>${book.title}</h3>
+          <p> ${book.authors?`Wriiten by ${book.authors[0]}`:'Anonymus author'}</p>
+        </div>
+        <div class="book-img flex-group">
+          <img
+            src="${book.imageLink.small}"
+            alt=""
+          />
+        </div>
+      </li>`
+}
+async function getAllBooks() {
+  const allBooks = await axios.get(booksUrl);
+  return allBooks;
+}
 
 // default actions of dom
 document.addEventListener('DOMContentLoaded', function() {
@@ -163,10 +230,10 @@ document.addEventListener('DOMContentLoaded', function() {
             categorySelectWrapper.setAttribute('data-value', optionDiv.textContent);
         });
     });
+
     displayBooksPage();
 });
 
-//search by name
 //paginate end
 //Check if there is a ibsn 
 //pop up messages - loader...
