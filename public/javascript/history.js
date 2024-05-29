@@ -88,15 +88,44 @@ document.addEventListener('DOMContentLoaded', function () {
     const paginationContainer = document.getElementById('pagination-container');
     paginationContainer.innerHTML = '';
   
+    // Create and append the "Previous" button
+    const prevButton = document.createElement('button');
+    prevButton.innerText = 'Previous';
+    prevButton.disabled = currentPage === 1;
+    prevButton.addEventListener('click', () => {
+      if (currentPage > 1) {
+        currentPage--;
+        updateTable();
+        renderPagination();
+      }
+    });
+    paginationContainer.appendChild(prevButton);
+  
+    // Create and append the page number buttons
     for (let i = 1; i <= totalPages; i++) {
       const button = document.createElement('button');
       button.innerText = i;
+      button.disabled = i === currentPage;
       button.addEventListener('click', () => {
         currentPage = i;
         updateTable();
+        renderPagination();
       });
       paginationContainer.appendChild(button);
     }
+  
+    // Create and append the "Next" button
+    const nextButton = document.createElement('button');
+    nextButton.innerText = 'Next';
+    nextButton.disabled = currentPage === totalPages;
+    nextButton.addEventListener('click', () => {
+      if (currentPage < totalPages) {
+        currentPage++;
+        updateTable();
+        renderPagination();
+      }
+    });
+    paginationContainer.appendChild(nextButton);
   };
 
   fetchHistory();
