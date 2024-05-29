@@ -1,17 +1,17 @@
-document.addEventListener('DOMContentLoaded', function () {
-    const table = document.querySelector('table tbody');
-    const sortSelect = document.getElementById('sort-select');
-    const baseUrl = 'http://localhost:3000/history';
+// document.addEventListener('DOMContentLoaded', function () {
+//     const table = document.querySelector('table tbody');
+//     const sortSelect = document.getElementById('sort-select');
+//     const baseUrl = 'http://localhost:3000/history';
 
-    const rows = Array.from(table.querySelectorAll('tr'));
-    console.log('Rows:', rows);
+//     const rows = Array.from(table.querySelectorAll('tr'));
+//     console.log('Rows:', rows);
 
-    const fetchBooks = async () => {
-        const { data } = await axios.get(`${baseUrl}`)
-        console.log(data);
-    }
+//     const fetchBooks = async () => {
+//         const { data } = await axios.get(`${baseUrl}`)
+//         console.log(data);
+//     }
 
-    fetchBooks()
+//     fetchBooks()
 
     // const addBook = async () => {
     //     await axios.post(baseUrl, {
@@ -41,13 +41,13 @@ document.addEventListener('DOMContentLoaded', function () {
     //         });
     //     }
     // })
-});
+// });
 
+const tableBody = document.querySelector('table tbody');
+const categorySelect = document.getElementById('category-select');
+const sortAlphabeticalButton = document.getElementById('sort-alphabetical');
+const baseUrl = 'http://localhost:8001/history';
 document.addEventListener('DOMContentLoaded', function () {
-    const tableBody = document.querySelector('table tbody');
-    const categorySelect = document.getElementById('category-select');
-    const sortAlphabeticalButton = document.getElementById('sort-alphabetical');
-    const baseUrl = 'http://localhost:3000/history';
 
 
     const fetchHistory = async () => {
@@ -63,10 +63,7 @@ document.addEventListener('DOMContentLoaded', function () {
             data.forEach(action => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td>${action.actionId}</td>
-                    <td>${action.bookId}</td>
                     <td>${action.bookName}</td>
-                    <td>${action.numCopies}</td>
                     <td>${action.operationType}</td>
                     <td>${action.operationDate}</td>
                     <td>${action.operationTime}</td>
@@ -78,20 +75,17 @@ document.addEventListener('DOMContentLoaded', function () {
         }
     };
 
-
-    const sortAlphabetically = () => {
-        const rows = Array.from(tableBody.querySelectorAll('tr'));
-        rows.sort((a, b) => {
-            const nameA = a.cells[2].innerText.toLowerCase();
-            const nameB = b.cells[2].innerText.toLowerCase();
-            return nameA.localeCompare(nameB);
-        });
-        rows.forEach(row => tableBody.appendChild(row));
-    };
-
-
-    sortAlphabeticalButton.addEventListener('click', sortAlphabetically);
-
-
     fetchHistory();
 });
+const sortAlphabetically = () => {
+    const rows = Array.from(tableBody.querySelectorAll('tr'));
+    rows.sort((a, b) => {
+        const nameA = a.cells[2].innerText.toLowerCase();
+        const nameB = b.cells[2].innerText.toLowerCase();
+        return nameA.localeCompare(nameB);
+    });
+    rows.forEach(row => tableBody.appendChild(row));
+};
+
+
+sortAlphabeticalButton.addEventListener('click', sortAlphabetically);

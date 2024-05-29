@@ -16827,6 +16827,19 @@
       "numOfCopies": 8
     }
   ],
-  "history": [],
+  "history": [
+    {
+      "bookName":"b",
+      "operationType":"2",
+      "operationDate":"3",
+      "operationTime":"4"
+    },
+    {
+      "bookName":"a",
+      "operationType":"2",
+      "operationDate":"3",
+      "operationTime":"4"
+    }
+  ],
   "favourites": []
 }
