@@ -23,45 +23,55 @@
       </div>
       <ul class="navbar-options flex-group">
         <li>
-          <a href="home.html"><i class="fa-solid fa-house"></i> Home</a>
-        </li>
-        <li>
-          <a class="current-page" href="#"
-            ><i class="fa-solid fa-landmark"></i> History</a
+          <a href="home.html"
+            ><i class="fa-solid fa-house"></i>
+            <span class="icon-text">Home</span></a
           >
         </li>
         <li>
-          <a href="#"><i class="fa-regular fa-star"></i> Favourites</a>
+          <a class="current-page" href="history.html"
+            ><i class="fa-solid fa-landmark"></i>
+            <span class="icon-text">History</span></a
+          >
         </li>
         <li>
-          <a href="#"><i class="fa-solid fa-magnifying-glass"></i> All Books</a>
+          <a href="favourites.html"
+            ><i class="fa-regular fa-star"></i>
+            <span class="icon-text">Favourites</span></a
+          >
+        </li>
+        <li>
+          <a href="books.html"
+            ><i class="fa-solid fa-magnifying-glass"></i>
+            <span class="icon-text"> All Books</span></a
+          >
         </li>
       </ul>
     </nav>
 
     <div class="main-content flex-group">
-      <div class="table_wrap">
+      <div class="table_wrap flex-group">
         <h1>Actions History:</h1>
         <table>
           <thead>
             <tr>
-              <th>Book Name</th>
-              <th>Operation Type</th>
+              <th id="book-name-header">Book Name</th>
+              <th id="operation-type-header">Operation Type</th>
               <th>Operation Date</th>
-              <th>Operation Time</th>
+              <th>Comments</th>
             </tr>
           </thead>
           <tbody id="history-body"></tbody>
         </table>
-        <div id="pagination-container">
-          <div class="pagination">
-            <button id="prev-btn">Previous</button>
-            <button id="next-btn">Next</button>
+        <!-- <div id="pagination-container">
+          <div class="pagination flex-group">
+            <button class="btn" id="prev-btn">previous</button>
+            <button class="btn" id="next-btn">next</button>
           </div>
-        </div>
+        </div> -->
       </div>
 
-      <div class="side_bar">
+      <!-- <div class="side_bar">
         <h2>Sort history results by:</h2>
         <ul>
           <li>
@@ -79,7 +89,7 @@
             <button id="sort-alphabetical">Sort</button>
           </li>
         </ul>
-      </div>
+      </div> -->
     </div>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
     <script src="javascript/history.js"></script>

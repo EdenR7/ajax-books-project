@@ -777,52 +777,6 @@
       "numOfCopies": 9
     },
     {
-      "id": "821c",
-      "title": "A Defence of the Record of Revelation Agaisnt \"Christian Theology and Modern Scepticism.\".",
-      "authors": [
-        "John Du Boulay"
-      ],
-      "numPages": 36,
-      "imageLink": {
-        "small": "http://books.google.com/books/content?id=GOUbAbq33q4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-        "big": "http://books.google.com/books/content?id=GOUbAbq33q4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-      },
-      "categories": [
-        null
-      ],
-      "ISBN": [
-        {
-          "type": "OTHER",
-          "identifier": "BL:A0021970351"
-        }
-      ],
-      "numOfCopies": 21
-    },
-    {
-      "id": "0b57",
-      "title": "A Dictionary of Music and Musicians",
-      "authors": [
-        "George Grove"
-      ],
-      "numPages": 784,
-      "imageLink": {
-        "small": "http://books.google.com/books/content?id=5I_q52-HJCYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-        "big": "http://books.google.com/books/content?id=5I_q52-HJCYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-      },
-      "categories": [
-        [
-          "Music"
-        ]
-      ],
-      "ISBN": [
-        {
-          "type": "OTHER",
-          "identifier": "UCI:31970001387718"
-        }
-      ],
-      "numOfCopies": 20
-    },
-    {
       "id": "7d19",
       "title": "A manual of the mollusca",
       "authors": [
@@ -3072,7 +3026,7 @@
           "identifier": "BSB:BSB11648555"
         }
       ],
-      "numOfCopies": 19
+      "numOfCopies": 20
     },
     {
       "id": "3dcf",
@@ -3837,7 +3791,7 @@
           "identifier": "1452579903"
         }
       ],
-      "numOfCopies": 15
+      "numOfCopies": 18
     },
     {
       "id": "0aa7",
@@ -4725,28 +4679,6 @@
       "numOfCopies": 16
     },
     {
-      "id": "90e0",
-      "title": "An Account of the Tribes on the Neilgherries by J. Shortt, and a Geographical and Statistical Memoir of the Neilgherry Mountains by Colonel Ouchterlony",
-      "authors": [
-        "John Shortt (Botanist?)"
-      ],
-      "numPages": 596,
-      "imageLink": {
-        "small": "http://books.google.com/books/content?id=4uV8U-yjbR4C&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-        "big": "http://books.google.com/books/content?id=4uV8U-yjbR4C&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-      },
-      "categories": [
-        null
-      ],
-      "ISBN": [
-        {
-          "type": "OTHER",
-          "identifier": "HARVARD:32044088754668"
-        }
-      ],
-      "numOfCopies": 5
-    },
-    {
       "id": "7291",
       "title": "U.S. Geological Survey Professional Paper",
       "numPages": 100,
@@ -5326,7 +5258,7 @@
           "identifier": "UCSD:31822043030352"
         }
       ],
-      "numOfCopies": 14
+      "numOfCopies": 15
     },
     {
       "id": "b639",
@@ -5854,28 +5786,6 @@
       "numOfCopies": 20
     },
     {
-      "id": "fb91",
-      "title": "Annual Report of the Missionary Society of the Methodist Episcopal Church",
-      "authors": [
-        "Methodist Episcopal Church. Missionary Society"
-      ],
-      "numPages": 290,
-      "imageLink": {
-        "small": "http://books.google.com/books/content?id=8LhVgGukIggC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-        "big": "http://books.google.com/books/content?id=8LhVgGukIggC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-      },
-      "categories": [
-        null
-      ],
-      "ISBN": [
-        {
-          "type": "OTHER",
-          "identifier": "UTEXAS:059172106041740"
-        }
-      ],
-      "numOfCopies": 7
-    },
-    {
       "id": "9524",
       "title": "Annual Report",
       "authors": [
@@ -6062,7 +5972,7 @@
           "identifier": "9789810618070"
         }
       ],
-      "numOfCopies": 11
+      "numOfCopies": 12
     },
     {
       "id": "026e",
@@ -6850,38 +6760,6 @@
         }
       ],
       "numOfCopies": 19
-    },
-    {
-      "id": "d61e",
-      "title": "$p$-Adic Analysis, Arithmetic and Singularities",
-      "authors": [
-        "Carlos Galindo",
-        "Alejandro Melle Hernández",
-        "Julio José Moyano-Fernández",
-        "Wilson A. Zúñiga-Galindo"
-      ],
-      "numPages": 311,
-      "description": "This volume contains the proceedings of the 2019 Lluís A. Santaló Summer School on $p$-Adic Analysis, Arithmetic and Singularities, which was held from June 24–28, 2019, at the Universidad Internacional Menéndez Pelayo, Santander, Spain. The main purpose of the book is to present and analyze different incarnations of the local zeta functions and their multiple connections in mathematics and theoretical physics. Local zeta functions are ubiquitous objects in mathematics and theoretical physics. At the mathematical level, local zeta functions contain geometry and arithmetic information about the set of zeros defined by a finite number of polynomials. In terms of applications in theoretical physics, these functions play a central role in the regularization of Feynman amplitudes and Koba-Nielsen-type string amplitudes, among other applications. This volume provides a gentle introduction to a very active area of research that lies at the intersection of number theory, $p$-adic analysis, algebraic geometry, singularity theory, and theoretical physics. Specifically, the book introduces $p$-adic analysis, the theory of Archimedean, $p$-adic, and motivic zeta functions, singularities of plane curves and their Poincaré series, among other similar topics. It also contains original contributions in the aforementioned areas written by renowned specialists. This book is an important reference for students and experts who want to delve quickly into the area of local zeta functions and their many connections in mathematics and theoretical physics.",
-      "imageLink": {
-        "small": "http://books.google.com/books/content?id=Ktt1EAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-        "big": "http://books.google.com/books/content?id=Ktt1EAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-      },
-      "categories": [
-        [
-          "Mathematics"
-        ]
-      ],
-      "ISBN": [
-        {
-          "type": "ISBN_13",
-          "identifier": "9781470467791"
-        },
-        {
-          "type": "ISBN_10",
-          "identifier": "1470467798"
-        }
-      ],
-      "numOfCopies": 18
     },
     {
       "id": "bd35",
@@ -7773,35 +7651,6 @@
       "numOfCopies": 19
     },
     {
-      "id": "5d44",
-      "title": "BABADADA black-and-white, Alemannisch mid de Artikl - Australian English, s Bildwörterbuech - visual dictionary",
-      "authors": [
-        "Babadada GmbH"
-      ],
-      "numPages": 93,
-      "description": "BABADADA dictionaries are visual language education: Simple learning takes center stage. In a BABADADA dictionary images and language merge into a unit that is easy to learn and remember. Each book contains over 1000 black-and-white illustrations. The goal is to learn the basics of a language much faster and with more fun than possible with a complicated text dictionary. This book is based on the very successful online picture dictionary BABADADA.COM, which offers easy language entry for countless language combinations - Used by thousands of people and approved by well-known institutions.",
-      "imageLink": {
-        "small": "http://books.google.com/books/content?id=qY9tEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-        "big": "http://books.google.com/books/content?id=qY9tEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-      },
-      "categories": [
-        [
-          "Study Aids"
-        ]
-      ],
-      "ISBN": [
-        {
-          "type": "ISBN_13",
-          "identifier": "9783366075547"
-        },
-        {
-          "type": "ISBN_10",
-          "identifier": "3366075546"
-        }
-      ],
-      "numOfCopies": 16
-    },
-    {
       "id": "701c",
       "title": "A Woman' S Vengeance a Novel",
       "numPages": 320,
@@ -8340,25 +8189,6 @@
         }
       ],
       "numOfCopies": 8
-    },
-    {
-      "id": "346b",
-      "title": "Mid-Atlantic Electronic Warfare Range (MAEWR) Within Restricted Airspace R-5306A",
-      "numPages": 274,
-      "imageLink": {
-        "small": "http://books.google.com/books/content?id=U_E3AQAAMAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-        "big": "http://books.google.com/books/content?id=U_E3AQAAMAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-      },
-      "categories": [
-        null
-      ],
-      "ISBN": [
-        {
-          "type": "OTHER",
-          "identifier": "NWU:35556030219158"
-        }
-      ],
-      "numOfCopies": 11
     },
     {
       "id": "bfff",
@@ -9349,30 +9179,6 @@
         }
       ],
       "numOfCopies": 16
-    },
-    {
-      "id": "6858",
-      "title": "1974 Census of Agriculture: State reports. 54 pts. in 59 v",
-      "authors": [
-        "United States. Bureau of the Census"
-      ],
-      "numPages": 864,
-      "imageLink": {
-        "small": "http://books.google.com/books/content?id=MN3PSX-nXjMC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-        "big": "http://books.google.com/books/content?id=MN3PSX-nXjMC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-      },
-      "categories": [
-        [
-          "Agriculture"
-        ]
-      ],
-      "ISBN": [
-        {
-          "type": "OTHER",
-          "identifier": "WISC:89095314613"
-        }
-      ],
-      "numOfCopies": 12
     },
     {
       "id": "28f3",
@@ -11308,30 +11114,6 @@
       "numOfCopies": 14
     },
     {
-      "id": "ce6f",
-      "title": "A Dictionary of Medical Science ...",
-      "authors": [
-        "Robley Dunglison"
-      ],
-      "numPages": 1240,
-      "imageLink": {
-        "small": "http://books.google.com/books/content?id=VmEPAAAAYAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-        "big": "http://books.google.com/books/content?id=VmEPAAAAYAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-      },
-      "categories": [
-        [
-          "Medicine"
-        ]
-      ],
-      "ISBN": [
-        {
-          "type": "OTHER",
-          "identifier": "HARVARD:HC18ER"
-        }
-      ],
-      "numOfCopies": 9
-    },
-    {
       "id": "4638",
       "title": "Proceedings of the London Mathematical Society",
       "authors": [
@@ -12000,7 +11782,7 @@
           "identifier": "0553897845"
         }
       ],
-      "numOfCopies": 12
+      "numOfCopies": 13
     },
     {
       "id": "5a41",
@@ -12470,30 +12252,6 @@
         }
       ],
       "numOfCopies": 19
-    },
-    {
-      "id": "0a0e",
-      "title": "\"Clear-cutting\" Practices on National Timberlands",
-      "authors": [
-        "United States. Congress. Senate. Committee on Interior and Insular Affairs. Subcommittee on Public Lands"
-      ],
-      "numPages": 1500,
-      "imageLink": {
-        "small": "http://books.google.com/books/content?id=YmpJAQAAIAAJ&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-        "big": "http://books.google.com/books/content?id=YmpJAQAAIAAJ&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-      },
-      "categories": [
-        [
-          "Clearcutting"
-        ]
-      ],
-      "ISBN": [
-        {
-          "type": "OTHER",
-          "identifier": "UCAL:B5160664"
-        }
-      ],
-      "numOfCopies": 20
     },
     {
       "id": "5d9b",
@@ -15167,44 +14925,6 @@
       "numOfCopies": 11
     },
     {
-      "id": "5a4d",
-      "title": "Agricultural Investigations at the United States Field Station, Sacaton, Ariz., 1925-1930",
-      "authors": [
-        "Adrian John Pieters",
-        "Benjamin Ralph Stauber",
-        "Chalmers Jackson King",
-        "Charles Walter Collins",
-        "Fred Earl Keating",
-        "George Wright Hoffman",
-        "Hazel Katherine Stiebeling",
-        "Mary E. Sweeny",
-        "Robert Claude Wright",
-        "Walter Cochran Davis",
-        "Charlotte Chatfield",
-        "Harold Frederick Loomis",
-        "John Valentine Schaffner",
-        "Ruth Leah Morgan",
-        "Thomas Moore Whiteman"
-      ],
-      "numPages": 1204,
-      "imageLink": {
-        "small": "http://books.google.com/books/content?id=CmkNh9spzAIC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-        "big": "http://books.google.com/books/content?id=CmkNh9spzAIC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-      },
-      "categories": [
-        [
-          "Beef cattle"
-        ]
-      ],
-      "ISBN": [
-        {
-          "type": "OTHER",
-          "identifier": "UIUC:30112038195233"
-        }
-      ],
-      "numOfCopies": 8
-    },
-    {
       "id": "bf41",
       "title": "Ad Reinhardt",
       "authors": [
@@ -15699,28 +15419,6 @@
       "numOfCopies": 15
     },
     {
-      "id": "0c84",
-      "title": "A Course of Lectures in Natural Philosophy. By the Late Richard Helsham, M.D. Professor of Physik and Natural Philosophy in the Uniuersity of Dublin. Published by Bryan Robinson, M.D",
-      "authors": [
-        "Richard Helsham"
-      ],
-      "numPages": 450,
-      "imageLink": {
-        "small": "http://books.google.com/books/content?id=m8jyryVfjSYC&printsec=frontcover&img=1&zoom=5&edge=curl&source=gbs_api",
-        "big": "http://books.google.com/books/content?id=m8jyryVfjSYC&printsec=frontcover&img=1&zoom=1&edge=curl&source=gbs_api"
-      },
-      "categories": [
-        null
-      ],
-      "ISBN": [
-        {
-          "type": "OTHER",
-          "identifier": "IBUR:BU101008506"
-        }
-      ],
-      "numOfCopies": 10
-    },
-    {
       "id": "3c2a",
       "title": "The Pharmacist and Chemist",
       "numPages": 1162,
@@ -16185,7 +15883,7 @@
           "identifier": "9780761862895"
         }
       ],
-      "numOfCopies": 16
+      "numOfCopies": 17
     },
     {
       "id": "4f5d",
@@ -16711,7 +16409,7 @@
           "identifier": "9781629699073"
         }
       ],
-      "numOfCopies": 16
+      "numOfCopies": 17
     },
     {
       "id": "9522",
@@ -16739,7 +16437,7 @@
           "identifier": "9781622851669"
         }
       ],
-      "numOfCopies": 17
+      "numOfCopies": 18
     },
     {
       "id": "5839",
@@ -16889,126 +16587,955 @@
         }
       ],
       "numOfCopies": 17
+    },
+    {
+      "id": "d0af",
+      "title": "A Handbook of Philippine Folklore",
+      "authors": [
+        "Mellie Leandicho Lopez"
+      ],
+      "numPages": 481,
+      "description": "The voluminous book provides a range of international theories and methodologies in analytical folklore investigations, and a classification scheme based on genre is offered as the system of taxonomy for Philippine traditional materials. Lopez counts on the regional folklorists to refine the classification according to the texts of their respective areas. The different genres, too, are explained and examined in another part of Lopez's study. The reader will definitely find interesting and useful, the illustrative examples for each genre.",
+      "imageLink": {
+        "small": "http://books.google.com/books/content?id=jGssp-oJrT8C&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE73LlXz3NRZxWmIUXB7G2DyFBbe9khagfqfryHawjRSfS333xZ44WZBp9X9MzktYTTpfQYjQek5lHdjO9xk6Hvr1GxDOwpsZQtr0NLXIND80JQa5dFKAwkPHsPnyL2lEIqzVYt4c&source=gbs_api",
+        "big": "http://books.google.com/books/content?id=jGssp-oJrT8C&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70lttyiyZdgu8hpfBglUOWkeYKH9gVPlxgzGrCGOWjk4nnJgvdOglDmAeRbHAd8TDE0WOy9yLL3_KB0ZcmT-UKkgDo1c6r_A6n0O3AEAS5d_GSTp8EYAp5jB2Yoa8uFqUhyzgrW&source=gbs_api"
+      },
+      "categories": [],
+      "ISBN": [
+        {
+          "type": "ISBN_10",
+          "identifier": "9715425143"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9789715425148"
+        }
+      ],
+      "numOfCopies": 13
+    },
+    {
+      "id": "a3d9",
+      "title": "Naruto, Vol. 72",
+      "authors": [
+        "Masashi Kishimoto"
+      ],
+      "numPages": 211,
+      "description": "<p>With Naruto and Sasuke working together, Kaguya is finally sealed away for good. But just when it seems that the ninja world can find true peace, one more obstacle appears. Fueled by opposing ideals, Naruto and Sasuke will determine the future of the world in one final fight!</p> -- VIZ Media",
+      "imageLink": {
+        "small": "http://books.google.com/books/publisher/content?id=rOiWCgAAQBAJ&printsec=frontcover&img=1&zoom=5&imgtk=AFLRE704kGn5vH2bJRjbvCTYZmVbn1ASPhJ5_yGRXQtyL2twP-bc0jRJLEaZ9_Y9FOX2KJElha6tm4ROrzhF3QY8sZcMpsqNOBZsOecvvR5Q5U1QfCMZl5njSAud-jCOOnPRX5UUptsy&source=gbs_api",
+        "big": "http://books.google.com/books/publisher/content?id=rOiWCgAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE71_UHigoojD1Jtr4yQlBhRg9-3MFmMj67nJo7VTw5X0Z1yaEYbpQuFKjrSf1X3tFudw_toGMNCL1IcTKpWgZrQaeMaJkdWawAu46sMynklveC6ovUK25rH2zN5W4y7M_eOtRcBg&source=gbs_api"
+      },
+      "categories": [
+        "Comics & Graphic Novels / Manga / General",
+        "Comics & Graphic Novels / Manga / Fantasy",
+        "Comics & Graphic Novels / Manga / Media Tie-In",
+        "Comics & Graphic Novels / Manga / Action & Adventure"
+      ],
+      "ISBN": [
+        {
+          "type": "ISBN_10",
+          "identifier": "1421587327"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9781421587325"
+        }
+      ],
+      "numOfCopies": 12
+    },
+    {
+      "id": "2367",
+      "title": "NARUTO 64",
+      "authors": [
+        "Masashi Kishimoto"
+      ],
+      "numPages": 192,
+      "description": "Kakashi goyah begitu mengetahui identitas si laki-laki bertopeng ternyata Obito, teman lamanya. Untungnya, kalimat ÒAku takkan membiarkan teman-temanku terbunuh!!Ó dari Naruto kembali membangkitkan semangatnya! Naruto dkk pun mengerahkan serangan! Tapi, Jubi akhirnya berhasil dibangkitkan!!?",
+      "imageLink": {
+        "small": "http://books.google.com/books/publisher/content?id=ozTMDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE72OIDF7I_D8mL3zyp-NzBR3Dh_qOYvG4GImEz7chsNYPVg0irvx15g8uv8zS4rtU0Md6sxdUJuhR27K_lOA-RxIXlE70dkWNJr3Xc7MWsFaZknbatB2mgLATh3BiJ3b50lyVN3c&source=gbs_api",
+        "big": "http://books.google.com/books/publisher/content?id=ozTMDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70TDnQD_HmGy8nznWHrG63qUdNcAyJHX9eP5K8v7TKlo_I24iy2WErPFGAkH5qZzA3z12p5QGPb29-OBrWfl7vkJNNiPcxd5ZRRcbdfos4jaS07-eR3iyO8Kj5tdolqdyPT8Yty&source=gbs_api"
+      },
+      "categories": [
+        "Comics & Graphic Novels / Manga / Fantasy"
+      ],
+      "ISBN": [
+        {
+          "type": "ISBN_10",
+          "identifier": "6020239578"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9786020239576"
+        }
+      ],
+      "numOfCopies": 13
+    },
+    {
+      "id": "daec",
+      "title": "Naruto 16",
+      "authors": [
+        "Masashi Kishimoto"
+      ],
+      "numPages": 192,
+      "description": "Si concluderà la battaglia fra Naruto e anche la guerra fra la Foglia e la Sabbia. Tuttavia, una minaccia ancora più spaventosa di Orochimaru insidierà la tranquillità del Villaggio e la vita di Naruto: quella rappresentata da Itachi Uchiha!",
+      "imageLink": {
+        "small": "http://books.google.com/books/publisher/content?id=i6nLEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE72xOHLxQfrBR9Fm3ktZbFmFfAnBO5pn-bOY1c5ENLDEhj6XjGGWgqZaoHrNKST_HDTNnsLt80pRbcbMkMMD2IBr_HOZuiAv4JfDpaRC1x5FJIgEJg9uu7U-iJS2irVZnv4LvqPP&source=gbs_api",
+        "big": "http://books.google.com/books/publisher/content?id=i6nLEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73R7-E_VYWOv8_--7prOqv2DauZUkS0FPA4t4xzPnXBzk1jnC3arHHdVavDvPV8bnyRVUuaCMkmkcnERJk4jIvX9edhvRZFLDFcxfL9tKojom-h1Snwpe8bhcJZYsjAShaU80kk&source=gbs_api"
+      },
+      "categories": [
+        "Comics & Graphic Novels / Manga / General",
+        "Comics & Graphic Novels / Manga / Action & Adventure"
+      ],
+      "ISBN": [
+        {
+          "type": "ISBN_10",
+          "identifier": "8828770236"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9788828770237"
+        }
+      ],
+      "numOfCopies": 16
+    },
+    {
+      "id": "6d4d",
+      "title": "Naruto 1",
+      "authors": [
+        "Masashi Kishimoto"
+      ],
+      "numPages": 192,
+      "description": "L’attesa è finalmente finita, arriva l’edizione digitale di Naruto, il capolavoro di Masashi Kishimoto! Dal settimanale “Shonen Jump” di Shueisha ecco il giovanissimo Uzumaki Naruto che vuole diventare un famoso ninja e lasciare un segno nella storia. Gli ostacoli sul suo cammino sono però molti, come le prove che dovrà sostenere e i rivali che dovrà affrontare…",
+      "imageLink": {
+        "small": "http://books.google.com/books/publisher/content?id=IAWvEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE71d6bZzBaSlchvu-C_TncPLshw5u77mxyMPs_nqro1RQGgVSpMy9s0tAtsruvCYU0vMwyjvobzknKsTsE0kYRyGIBUB_-lbp8sguIPLE8zznpiLu5WJK0R6oxzkFviOpxBUncjw&source=gbs_api",
+        "big": "http://books.google.com/books/publisher/content?id=IAWvEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72GrOqscgZCbzFq3oLYdltZkQpqa4Igwwu27Gof9oh0wPM8DQ2u4tQbiqwt-om-Doir_KB40MAgVUpJYsKCL85mO8MiRivN9p8F38st0h2YZDd2fUeWWiwCnFnBoB-v-8EBl_Qu&source=gbs_api"
+      },
+      "categories": [
+        "Comics & Graphic Novels / Manga / General",
+        "Comics & Graphic Novels / Manga / Action & Adventure"
+      ],
+      "ISBN": [
+        {
+          "type": "ISBN_10",
+          "identifier": "8828771119"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9788828771111"
+        }
+      ],
+      "numOfCopies": 19
+    },
+    {
+      "id": "80b3",
+      "title": "Naruto 25",
+      "authors": [
+        "Masashi Kishimoto"
+      ],
+      "numPages": 192,
+      "description": "Dopo un lunghissimo inseguimento che è quasi costato la vita a molti ragazzi del Villaggio della Foglia, Naruto raggiunge Sasuke, il suo amico e rivale di sempre. Sasuke, assetato di potere e ossessionato dal volersi vendicare del fratello Itachi, ha tradito la Foglia per unirsi al perfido Orochimaru. A a valgono le suppliche di Naruto: Sasuke non desiste dai suoi propositi, così come Naruto non si rassegna a vedere l'amico gettare al vento la propria vita. Prima del fatidico scontro, Sasuke ripercorre con la memoria tutta la propria infanzia, vissuta all'ombra di un fratello che sterminerà l'intero clan degli Uchiha.",
+      "imageLink": {
+        "small": "http://books.google.com/books/publisher/content?id=J2vvEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE70sxAp4-hGtyZnusSVGrNztM1AtyQ7-Dd5KicQCz4p5B5t7AE2m_nggEHODs4cwAQmLDr7p2zskl2zy0zA21BFbSTAAyqs8eT3zart7h7c0BFuVgouJAgleqkQwiuOwB7Ly0XjU&source=gbs_api",
+        "big": "http://books.google.com/books/publisher/content?id=J2vvEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73NSyrgWfAe_ecy0dl3hMR2x5EoFynSqr5Ax3yE2FUhKSbN_9nhjVJ0jyxKkZ7epr3c5w_4ryWHtruKCN4ig3G6oDMyKTaqD1chDlkuk6UIZ0V2diSbaHZpA6lvUsvdyPcBdBp8&source=gbs_api"
+      },
+      "categories": [
+        "Comics & Graphic Novels / Manga / General",
+        "Comics & Graphic Novels / Manga / Action & Adventure"
+      ],
+      "ISBN": [
+        {
+          "type": "ISBN_10",
+          "identifier": "8828767618"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9788828767619"
+        }
+      ],
+      "numOfCopies": 6
+    },
+    {
+      "id": "866b",
+      "title": "Naruto 19",
+      "authors": [
+        "Masashi Kishimoto"
+      ],
+      "numPages": 192,
+      "description": "Un numero di tutta azione in cui i tre ninja supremi parteciperanno a uno scontro memorabile! Che ruolo avrà Naruto in una battaglia di simili proporzioni?",
+      "imageLink": {
+        "small": "http://books.google.com/books/publisher/content?id=XxvYEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE70DcafkI77uEnvU_7kqgo0_lEbGwF4JrmGw_CekdOJ41czv8sfp5YvjugIZwwP82nEiefn0FC7CDaul5uTGHhmZ3C5abiIHJ5twUpJ8yy82SoxxLg4h2Q4L44kL2I10eAQJy5zu&source=gbs_api",
+        "big": "http://books.google.com/books/publisher/content?id=XxvYEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73WkTtnAFZHEEKRNWVxIIMPVQZl4Lm7o2c4-zcPtcoSYO2z5CbUL-N_BP10AFxSKk2KtIC4NIsy0yUpK3l5QlWBJ2p_Qrv7uwN894tCYeoLTjpuqvtrO9-m0m7NmQpuP2-y9gR4&source=gbs_api"
+      },
+      "categories": [
+        "Comics & Graphic Novels / Manga / General",
+        "Comics & Graphic Novels / Manga / Action & Adventure"
+      ],
+      "ISBN": [
+        {
+          "type": "ISBN_10",
+          "identifier": "8828770139"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9788828770138"
+        }
+      ],
+      "numOfCopies": 14
+    },
+    {
+      "id": "8210",
+      "title": "Naruto 17",
+      "authors": [
+        "Masashi Kishimoto"
+      ],
+      "numPages": 192,
+      "description": "<br>Naruto si ritrova faccia a faccia con Itachi e Kisame, decisi a rapirlo per impadronirsi del potere della Volpe a Nove Code. Solo il provvidenziale intervento di Sasuke e di Jiraiya farà guadagnare tempo a Naruto e metterà in fuga i due aggressori. Naruto e Jiraiya ripartono quindi per il loro viaggio alla ricerca di Tsunade, l'ultima dei tre ninja supremi e colei che è stata designata a divenire il quinto hokage. Jiraiya approfitterà dell'occasione per insegnare al suo nuovo discepolo una portentosa quanto difficile tecnica.<br>",
+      "imageLink": {
+        "small": "http://books.google.com/books/publisher/content?id=vgzZEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE70-qOJowaCmXLi_iRUuzzj9SV4tBl3jw3rtbsxb4ykkeWqiFB5LxnSmPHE2oCGe_BB7SFLBoAHlXW1RKCJBZKKpMk8eP2b0AFYCu7m83z7yUjdv9UJfh9GAU6axK3m1lUzoYWL5&source=gbs_api",
+        "big": "http://books.google.com/books/publisher/content?id=vgzZEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE71rgcoe3Cfu6CZb9j-72J6prsaUoSaguZN3qvuwBb9bBLbs7M8BuBl6v1e99VYpRwkB_wsiBCGPPwahtPh2wNyxnsJ9AGCos-K8ZvdII7EqcGklZiy6d61Pv4tQJckMQZHkdPlQ&source=gbs_api"
+      },
+      "categories": [
+        "Comics & Graphic Novels / Manga / General",
+        "Comics & Graphic Novels / Manga / Action & Adventure"
+      ],
+      "ISBN": [
+        {
+          "type": "ISBN_10",
+          "identifier": "8828770228"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9788828770220"
+        }
+      ],
+      "numOfCopies": 20
+    },
+    {
+      "id": "762b",
+      "title": "One Piece, Vol. 100",
+      "authors": [
+        "Eiichiro Oda"
+      ],
+      "numPages": 216,
+      "description": "<b>Join Monkey D. Luffy and his swashbuckling crew in their search for the ultimate treasure, One Piece!</b><br><br>As a child, Monkey D. Luffy dreamed of becoming King of the Pirates. But his life changed when he accidentally gained the power to stretch like rubber...at the cost of never being able to swim again! Years, later, Luffy sets off in search of the One Piece, said to be the greatest treasure in the world...<br><br>The big powers converge as Luffy, Law, and Kid face off against Kaido and Big Mom. Is there any hope of victory against this ultimate alliance?! Onigashima quakes with power as some of the fiercest pirates in the world go head-to-head!!",
+      "imageLink": {
+        "small": "http://books.google.com/books/content?id=u4OxzgEACAAJ&printsec=frontcover&img=1&zoom=5&imgtk=AFLRE72ZkHu9ESNAhiz-OcjmJ5RASWjx9CfSEBqeW7iFWBheEgycsVGxp1L94O5uBTKwCPnPpeWlRH99BdOBdQVXcYBXIpSKNkG_sInWCu21g1rhd7bOSdXM7H-7XVGNK-W78E1uLj9W&source=gbs_api",
+        "big": "http://books.google.com/books/content?id=u4OxzgEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE736-dU3FwJG1gdehL1HLSUem1bEkTYTqW5ha0DLKpxIgOc3oxLZiHKjhas7FKvD0RjMu1p7dkim-ZLCE18QvvUOc772BoAxFZmIhBtaAEU7hBnAj1FQbMpIUoMLSpLxoXReM1Se&source=gbs_api"
+      },
+      "categories": [
+        "Comics & Graphic Novels / Manga / Fantasy",
+        "Comics & Graphic Novels / Manga / Media Tie-In",
+        "Comics & Graphic Novels / Manga / Action & Adventure",
+        "Comics & Graphic Novels / Manga / General"
+      ],
+      "ISBN": [
+        {
+          "type": "ISBN_10",
+          "identifier": "1974732177"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9781974732173"
+        }
+      ],
+      "numOfCopies": 19
+    },
+    {
+      "id": "a520",
+      "title": "Real Madrid CF",
+      "authors": [
+        "Kate Shoup"
+      ],
+      "numPages": 64,
+      "description": "Spain's Real Madrid Club de Futbol is one of the most successful soccer teams ever to exist. This book traces the team's history, from its founding in 1902 to modern times. Readers will learn about this top-tier team's royal roots, its fierce rivalry with Barcelona, both on and off the field, and its controversial relationship with Spanish dictator Francisco Franco following the Spanish Civil War. Readers will meet its most famous players, and its truly memorable managers. Full of facts, sidebars, and engaging photographs, this book will excite any young reader with a passion for soccer.",
+      "imageLink": {
+        "small": "http://books.google.com/books/content?id=Lr-fxAEACAAJ&printsec=frontcover&img=1&zoom=5&imgtk=AFLRE712B7TsAbfEFYZPnOPE7-6mR40Jst7HA3lowDFpvSIrLc5gNfRleesegtmENRilym5KaD03mF_RtTBX559VCRzHDqbnRS8CVXjOhfrlo_pMsGfWE39qchR3M5P7-OKRGZiDaVjC&source=gbs_api",
+        "big": "http://books.google.com/books/content?id=Lr-fxAEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE71-yTchsjxlVHpcmtHPTVDwFkQv7VlP25rwZWt90LDH7s1WXvy01Nz2fdhtcC5UqH4MCcYbYufes4e7HQKx7Ircxypw0fWT2uWNwz0jFZFO2_xIFrb_d7PFDY5TF_6oTiQ0CWVz&source=gbs_api"
+      },
+      "categories": [
+        "Juvenile Nonfiction / Biography & Autobiography / Sports & Recreation",
+        "Juvenile Nonfiction / People & Places / Europe",
+        "Juvenile Nonfiction / Sports & Recreation / Soccer",
+        "Sports & Recreation / Soccer"
+      ],
+      "ISBN": [
+        {
+          "type": "ISBN_10",
+          "identifier": "1502652617"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9781502652614"
+        }
+      ],
+      "numOfCopies": 8
+    },
+    {
+      "id": "ef2f",
+      "title": "Real Madrid",
+      "authors": [
+        "Jeff Savage"
+      ],
+      "numPages": 32,
+      "description": "<p>Fans around the world know Real Madrid of Spain as one of the greatest and most successful soccer teams ever. Learn about Real Madrid's historic early years and the championship moments that made the team famous in this thrilling title! Discover more through photos of the action and engaging storylines with famous and beloved athletes.</p>",
+      "imageLink": {
+        "small": "http://books.google.com/books/publisher/content?id=a_NjDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE71Jbg41w-Q5RUBZBrU5B5UZhVMA4NsYmipebBXojhYrdra9cXxJlq_9WDRQJnv8EZwrCjiM15ISmA12cNwZBqotYE0-ds64L07Q1bB1swHnRipuZDa62anfKNh0bSQAR2sR-zOC&source=gbs_api",
+        "big": "http://books.google.com/books/publisher/content?id=a_NjDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70C4PZecVekIvxw_vPrqtHcjEHdV67Dqe378lwfRVG_Iuwdk_ggw31cznCxGFDV-vFL-1zNYvO1XP_UvidiXvhXhTHjbwDjyVqAimLS8u96jSvgkIFyb0vwuL0Q7R93WlvL_7wi&source=gbs_api"
+      },
+      "categories": [
+        "Juvenile Nonfiction / Sports & Recreation / Soccer",
+        "Juvenile Nonfiction / People & Places / Europe"
+      ],
+      "ISBN": [
+        {
+          "type": "ISBN_10",
+          "identifier": "1541534549"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9781541534544"
+        }
+      ],
+      "numOfCopies": 5
+    },
+    {
+      "id": "d1d2",
+      "title": "Fear and Loathing in La Liga",
+      "authors": [
+        "Sid Lowe"
+      ],
+      "numPages": 448,
+      "description": "<p><b>‘A history of modern Spain told through one of world football's most intense rivalries’ <i>Independent</i></b><br><b><br>‘Sports Book of the Year’ <i>Sunday Times</i></b><br><br>It’s Messi vs Ronaldo, it’s Catalonia vs Castilla. It’s the nation against the state, freedom fighters vs Franco’s fascists. It’s majestic goals and mesmerising skills, red cards and bench brawls. It’s the best two teams on the planet going face to face and toe to toe. <br><br><b>It’s more than a game. It’s a war.</b><br><b>It’s Barcelona vs Real Madrid.</b><br><br> Only, it’s not that simple. From the wounds left by the civil war to the teams’ recent global domination, historian and expert on Spanish football, Sid Lowe lifts the lid on sport’s greatest rivalry. Lowe has spoken to the biggest names and the forgotten heroes who defined their clubs. Men like Alfredo Di Stéfano and Johan Cruyff as well as the only survivor of the most politically charged game in history, the Barcelona striker who knocked Madrid out of the European Cup for the first time ever, and the president who celebrated his club’s defining moment by taking a midnight dip in the Thames.<br><br> By exploring the history, politics, culture, economics and language, while never forgetting the drama on the pitch, Lowe demonstrates the symbiotic nature of the relationship between these two football giants. In doing so he reveals the human story behind this explosive rivalry.</p>",
+      "imageLink": {
+        "small": "http://books.google.com/books/content?id=2l6zHv_reuUC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE724b9lQsDkvuKWJTeMUUcHDf5uZ0QPVlf-u0enwvI7mLrFW2YAeZvr2DmLt000fN1gCVzwPaQe3BqZ-x-iSs2TEmRqdCDCvNv08qBURt4OVbEqQeBCfp9kUnPGASIq1caC6wLcd&source=gbs_api",
+        "big": "http://books.google.com/books/content?id=2l6zHv_reuUC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE71hKoKAriWfwYYYPVMv14G7nEHU2QOwRXkcL4o8tns3uAqcXVevQGaSXzx9EaAF5y8mXHkcmUlSTFIO11ZJgWPXIEOYGaz0Ip_62CEP8MhFJZGWjQf8MCI2n5ZD8n6qWV4LCC_N&source=gbs_api"
+      },
+      "categories": [
+        "Biography & Autobiography / Sports",
+        "Sports & Recreation / Soccer",
+        "History / Europe / Spain",
+        "History / Social History",
+        "Sports & Recreation / General",
+        "History / Europe / General",
+        "History / General"
+      ],
+      "ISBN": [
+        {
+          "type": "ISBN_10",
+          "identifier": "1446496635"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9781446496633"
+        }
+      ],
+      "numOfCopies": 12
+    },
+    {
+      "id": "8658",
+      "title": "Forging Glory",
+      "authors": [
+        "Antonio Escohotado",
+        "Jesús Bengoechea"
+      ],
+      "numPages": 136,
+      "description": "<p> <b>A Brief History of Real Madrid told by a soccer-loving philosopher</b> </p> <p>What kind of determination drives Real Madrid to be the best of the best year after year, and to achieve it with unusual frequency? How do you explain that it has been the most successful club on the world for a century and more? Maybe taking prestige so seriously increments the amount of expertise, since one of the substantial advantages of sport over any other competitive activity is that it does not banish the magnetism of war, in fact it is tamed by the rule of fair play. Maybe it's that <i>fair play,</i> combined with an unique idiosyncrasy to understand this sport, which has led the team to be the epitome of football glory.</p> <p>Since its foundation in 1902 by two Catalan brothers to the expectation created by a new and colossal stadium for the future, and through the visionary character of Santiago Bernabéu and its current president, the reader will find arguments through the pages of this book to debunk its black legend, as well as the keys and details that have lead Real Madrid to be the most successful, famous and cosmopolitan enterprise that Spain has given to the world. </p> <p>Antonio Escohotado and Jesús Bengoechea examine the most admired (and envied) sports institution's past looking for answers, and incidentally they put its historical vicissitudes in context on light of the history of Spain and the rest of the world.</p>",
+      "imageLink": {
+        "small": "http://books.google.com/books/publisher/content?id=cIRjEAAAQBAJ&printsec=frontcover&img=1&zoom=5&imgtk=AFLRE70KSlaGPxEavc3H4_GmXwhw1GltcdQWo41lRoS5Gk0bN-F3MQMdQHS8aK58Yv2y0ZqGyl-4RoqM6a7MIPChXp88YWj-rMP1QBb594Io--y8cLRuqUZZTy5rU5UrNmHJk65wDokD&source=gbs_api",
+        "big": "http://books.google.com/books/publisher/content?id=cIRjEAAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE73DyABqL7aYl14b-5in6p2E-OFTCX7hBx-m09Vfz0hpY6RqYReTqTyNIe8xgPNKpy1-_eEOelgzS_vpZFuleimGAynwPgASFytrwiEvzQsISoA6aHP1ZsIV6dZJizmrTsykcaUP&source=gbs_api"
+      },
+      "categories": [
+        "Sports & Recreation / Soccer"
+      ],
+      "ISBN": [
+        {
+          "type": "ISBN_10",
+          "identifier": "8467065877"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9788467065879"
+        }
+      ],
+      "numOfCopies": 20
+    },
+    {
+      "id": "21eb",
+      "title": "Real Madrid",
+      "authors": [
+        "Paula M. Wilson"
+      ],
+      "numPages": 32,
+      "description": "\"Did you know that King Alfonso XIII of Spain allowed the Madrid Football Club to use the word real in their name in 1920? Real is Spanish for royal. Learn more exciting facts about this fascinating soccer club in Real Madrid, an Inside Professional Soccer book.\"--Amazon.com",
+      "imageLink": {
+        "small": "http://books.google.com/books/content?id=M8z4swEACAAJ&printsec=frontcover&img=1&zoom=5&imgtk=AFLRE70vJoY87uPbx-6OHLPXcDq1u_gCNlllqyB4kn_TBGo64G1_0nHYT9aFPHRkjqGNXltRKvlrwSXJjZeuYyWFBMBGa5MSJnJRfv3Tp22P3lUKPSg-LWcxxglDX9Qk65Y6INsmERas&source=gbs_api",
+        "big": "http://books.google.com/books/content?id=M8z4swEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE73JAAlF-nwvgSelczZKUs_HUc2d2nZ7PtcDKU7UyJelf3CP5aVqF5GDvCPGQWDRNGkaqLmR80rg4Y9pzmRocJWISBlIF7ACZQ66UrGLoXDqeIg3newRWmRj0yM5TghKCWkJWyny&source=gbs_api"
+      },
+      "categories": [
+        "Juvenile Nonfiction / Sports & Recreation / Soccer"
+      ],
+      "ISBN": [
+        {
+          "type": "ISBN_10",
+          "identifier": "1489677712"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9781489677716"
+        }
+      ],
+      "numOfCopies": 14
+    },
+    {
+      "id": "969f",
+      "title": "The Real Madrid Way",
+      "authors": [
+        "Steven G. Mandis"
+      ],
+      "numPages": 344,
+      "description": "<b>The untold story of Real Madrid: one of the most incredible turnarounds in sports and business history.</b> <br><br>Real Madrid is the most successful sports team on the planet. The soccer club has more trophies than any other sports team, including 11 UEFA Champions League trophies. However, the story behind the triumph goes beyond the players and coaches. Generally unnoticed, a management team consisting mostly of outsiders took the team from near bankruptcy to the most valuable sports organization in the world.<br><br>How did Real Madrid achieve such extraordinary success? Columbia Business School adjunct professor Steven G. Mandis investigates. Given unprecedented behind-the-scenes access, Mandis is the first researcher to rigorously ana- lyze both the on-the-field and business aspects of a sports team. What he learns is completely unexpected and challenges the conventional wisdom that moneyball-fueled data analytics are the primary instruments of success. Instead, Real Madrid's winning formula both on and off the field, from player selection to financial management, is based on aligning strategy with the culture and values of its fan base.<br><br>Chasing the most talented (and most expensive) players can be a recipe for a winning record, but also financial disaster, as it was for Real Madrid in the late 1990s. Real Madrid's management believes that the club exists to serve the Real Madrid community. They discovered that its fans care more about why the team exists, how their club wins, and whom it wins with versus just winning. The why, how, and whom create a community brand and identity, and inspire extraordinary passion and loyalty, which has led to amazing marketing and commercial success—in turn, attracting and paying for the best players in the world, with the values the fans expect. The club's values and culture also provide a powerful environment for these best players to work together to win trophies.<br><br> <i>The Real Madrid Way</i> explains how Real Madrid has created and maintains a culture that drives both financial and on-the-field success. This book is an engrossing account of the lifetime of one of the greatest clubs in the most popular sport in the world, and for business and organization leaders, it's an invaluable inside look at a compelling alternative model with lasting competitive advantages that can deliver superior and sustainable returns and performance.",
+      "imageLink": {
+        "small": "http://books.google.com/books/publisher/content?id=IEbQDAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE70uvLfonOxG14gid-d3wInehp7_ahRrZrjgjUgqAd30nwy8WANUguGJ4nQUuF9DVty1TbrpXRDcz9lHW6n-GPG8PGHeGYJ_nuy8XEDX27JrCf4jy3a_PV1wEgIAL5pNEsQ8pn9a&source=gbs_api",
+        "big": "http://books.google.com/books/publisher/content?id=IEbQDAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE720hWcVcoBMUdrCY9nYmGzsMs3x5X1IGgp9WLFroMTXUF6uir__vb2QQUZ4eJL2wiP8MgfKRNOOTN74VN7XsyCE6k8uYPKUe9IvzkaTBfMvtKH2uV_1G7zd-3QAA0je1_PMtt5J&source=gbs_api"
+      },
+      "categories": [
+        "Sports & Recreation / Business Aspects",
+        "Sports & Recreation / Soccer",
+        "Business & Economics / Leadership"
+      ],
+      "ISBN": [
+        {
+          "type": "ISBN_10",
+          "identifier": "1942952554"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9781942952558"
+        }
+      ],
+      "numOfCopies": 12
+    },
+    {
+      "id": "daa0",
+      "title": "Focus On: 100 Most Popular Real Madrid C.F. Players",
+      "authors": [
+        "Wikipedia contributors"
+      ],
+      "numPages": 1297,
+      "description": "",
+      "imageLink": {
+        "small": "http://books.google.com/books/publisher/content?id=yM1CDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE73so1fsFgE0PWMvAHEi_aCE_u7peSMPzNcD7CNAOWHS9lsyatMwkE8bD9dMRqBTqhw3g0GakxLVEwTgZV5QJ-gxBo30lU65Bb92cfCUtSR0lRU1zQqhigzlsfLldTPT-jowamRe&source=gbs_api",
+        "big": "http://books.google.com/books/publisher/content?id=yM1CDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70OpsMhWJQti9cdOmoEDT0LC0noxnoNmfLA2En3R0xuyT_g_GmM2O8unXXyLZ8RZpe7EmAPGwVzHvrGFhxQWYYpY7NcAp-K1QYx8XrpzXeX6KmhOPSb16WubmyY5VGHJUYpxN85&source=gbs_api"
+      },
+      "categories": [],
+      "ISBN": [],
+      "numOfCopies": 17
+    },
+    {
+      "id": "e03f",
+      "title": "Real Madrid CF",
+      "authors": [
+        "Kate Shoup"
+      ],
+      "numPages": 64,
+      "description": "Spain's Real Madrid Club de Futbol is one of the most successful soccer teams ever to exist. This book traces the team's history, from its founding in 1902 to modern times. Readers will learn about this top-tier team's royal roots, its fierce rivalry with Barcelona, both on and off the field, and its controversial relationship with Spanish dictator Francisco Franco following the Spanish Civil War. Readers will meet its most famous players, and its truly memorable managers. Full of facts, sidebars, and engaging photographs, this book will excite any young reader with a passion for soccer.",
+      "imageLink": {
+        "small": "http://books.google.com/books/publisher/content?id=BbjXDwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE70QV8i_TmAf15oL5PRkyQ_9-x40_wEPRNVg_Dgu6kR_ksoMrtzKSQnkfgLia3PNHB_rJLqg-cHDDp7XL1Fbb3IgSLWKwtlm-fS1UpCb_mLv5QDO2UH0tDjwK39FWMVzhTGNGKmN&source=gbs_api",
+        "big": "http://books.google.com/books/publisher/content?id=BbjXDwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70mP5nTbFwZD-IMFlfTg-q3VEqwG8463F_8NqSWSohYBVzsarFkfriZvkYhFaIMBhpnOI59WaeUREk0Sn3QvKddM8On_MSx1GbC6wjCc8QU2gbVgY98LX5AnmtriPdQXiiJJPdI&source=gbs_api"
+      },
+      "categories": [
+        "Juvenile Nonfiction / Biography & Autobiography / Sports & Recreation",
+        "Juvenile Nonfiction / Sports & Recreation / Soccer"
+      ],
+      "ISBN": [
+        {
+          "type": "ISBN_10",
+          "identifier": "1502652633"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9781502652638"
+        }
+      ],
+      "numOfCopies": 18
+    },
+    {
+      "id": "3322",
+      "title": "Liverpool in the Headlines",
+      "authors": [
+        "Daniel K. Longman"
+      ],
+      "numPages": 128,
+      "description": "Liverpool’s proud past can be well summed up by its headlines. Local author Daniel K. Longman delves into the archives of the Liverpool Echo to discover the events and personalities that have made the city what it is today. From the dramatic effects of the First and Second World Wars on the the city and its residents to the ‘Merseybeat’ era and the city’s regeneration, learn about Liverpool’s status as a cultural and industrial hub. The stories uncovered throughout Liverpool In The Headlines are a testament to the determination, strength and wit of the city’s people.",
+      "imageLink": {
+        "small": "http://books.google.com/books/publisher/content?id=KBqtCwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE70pon7gotMdl5jD6YCB-iT-98KZkzchB3t156fcZ8l9t37sbYIcZa0nfuHYwA2RP6XucdyMwEeL96te3kfE1InKPVVR7c66jBhimeE2ByQsHQkYKPMbDXtJvQmdge-f7Z-z7Iva&source=gbs_api",
+        "big": "http://books.google.com/books/publisher/content?id=KBqtCwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE73WPgvJ5F0sC34K2WNuJUs7fsj2l2Mt_Cp6WqkYT2o2ZwlW2YZLb3AzPmGliZx5sGtRNLUyBctOKJJXSks5APno5i6IgANCE6NR7TUoFGsagftab5NV4Ni5KTxBdRK62K_4Pu-D&source=gbs_api"
+      },
+      "categories": [
+        "Photography / Subjects & Themes / Regional",
+        "Photography / Subjects & Themes / Historical",
+        "Language Arts & Disciplines / Journalism",
+        "History / General"
+      ],
+      "ISBN": [
+        {
+          "type": "ISBN_10",
+          "identifier": "1445648873"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9781445648873"
+        }
+      ],
+      "numOfCopies": 6
+    },
+    {
+      "id": "ca63",
+      "title": "In the Land of Israel",
+      "authors": [
+        "Amos Oz"
+      ],
+      "numPages": 304,
+      "description": "<b>A snapshot of Israel and the West Bank in the 1980s, through the voices of its inhabitants, from the National Jewish Book Award–winning author of <i>Judas</i>.</b><br>  <br> Notebook in hand, renowned author and onetime kibbutznik Amos Oz traveled throughout his homeland to talk with people—workers, soldiers, religious zealots, aging pioneers, desperate Arabs, visionaries—asking them questions about Israel’s past, present, and future. Observant or secular, rich or poor, native-born or new immigrant, they shared their points of view, memories, hopes, and fears, and Oz recorded them.<br>  <br> What emerges is a distinctive portrait of a changing nation and a complex society, supplemented by Oz’s own observations and reflections, that reflects an insider’s view of a country still forming its own identity. <i>In the Land of Israel</i> is “an exemplary instance of a writer using his craft to come to grips with what is happening politically and to illuminate certain aspects of Israeli society that have generally been concealed by polemical formulas” (<i>The New York Times</i>)<i>. </i>",
+      "imageLink": {
+        "small": "http://books.google.com/books/content?id=y1yyiug-z74C&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE71sjG6EVr_cP6dQYYT-dONtvOsCpJX2hF07GkwBCyAUwzeDtgHxqNbrSWgz3Gm-suLrgmpcXgt_tEF7ppDFnwInk83zHeGuEgm7LCdHk27WWozvtfvm00pN3Hyt2-c5WvSqff6N&source=gbs_api",
+        "big": "http://books.google.com/books/content?id=y1yyiug-z74C&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE715Rw48w-0qidAtfAf9_0ehmWV7z3YWUWiplwhGigxxPwNHSA1nLkuqeo0Q6uv6Hf58jin54cexLTV903HhIkfHvw_wHbTSxb8znEMj7_1nyaL9iWRZRByVfo_40oiPz2-HewzF&source=gbs_api"
+      },
+      "categories": [
+        "History / Middle East / Israel & Palestine",
+        "Social Science / Anthropology / Cultural & Social",
+        "Literary Collections / Essays"
+      ],
+      "ISBN": [
+        {
+          "type": "ISBN_10",
+          "identifier": "0547540779"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9780547540771"
+        }
+      ],
+      "numOfCopies": 5
+    },
+    {
+      "id": "2fd9",
+      "title": "In the Land of the Patriarchs",
+      "authors": [
+        "Noam Shoked"
+      ],
+      "numPages": 307,
+      "description": "<p><b>2024 PROSE Award in Architecture and Urban Planning</b><br> <br> <b>An on-the-ground account of the design and evolution of West Bank settlements, showing how one of the world’s most contested landscapes was produced by unexpected conflicts and collaborations among widely divergent actors.</b></p> <p>Since capturing the West Bank in 1967, Israel has overseen the construction of scores of settlements across the territory’s rocky hilltops. The settlements are part of a fierce political conflict. But they are not just hotly contested political ventures. They are also something more everyday: residential architectural projects.</p> <p><i>In the Land of the Patriarchs</i>is an on-the-ground account of the design and evolution of West Bank settlements. Noam Shoked shows how settlements have been shaped not only by the decisions of military generals, high-profile politicians, and prominent architects but also by a wide range of actors, including real estate developers, environmental consultants, amateur archeologists, and Israelis who felt unserved by the country’s housing system. The patterns of design and construction they have inspired reflect competing worldviews and aesthetic visions, as well as everyday practices not typically associated with the politics of the Israeli occupation. Revealing the pragmatic choices and contingent circumstances that drive what appears to be a deliberately ideological landscape, Shoked demonstrates how unpredictable the transformation of political passion into brick and mortar can be.</p>",
+      "imageLink": {
+        "small": "http://books.google.com/books/content?id=7QmrzwEACAAJ&printsec=frontcover&img=1&zoom=5&imgtk=AFLRE70KC0y488XiRrWs7fhYZfIOxInqG81qR-g7w8XRGWkq5GfEbHRKTua2TxErvz5a355xsBpj9Ff99bZFzPiAiigRPCeRUIlvJqvzietvEaAJVpxGF-asxLGqHsmKi46nDvYvZNgo&source=gbs_api",
+        "big": "http://books.google.com/books/content?id=7QmrzwEACAAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE72zw2RJWBGdRcul0-WcyuJQQMBOyzsCn49JFmzLrQ4qICGSf43ndLoWJKmhR1sSnC1AHS_1yyO3zWRnuBsQZYEa9KqZImP2dL-jlJIh0qLW6aW9wSbqJNZvCeH25Dn3FBqhSl-W&source=gbs_api"
+      },
+      "categories": [
+        "Architecture / General",
+        "Architecture / History / Contemporary (1945-)",
+        "Architecture / Urban & Land Use Planning",
+        "History / Middle East / Israel & Palestine"
+      ],
+      "ISBN": [
+        {
+          "type": "ISBN_10",
+          "identifier": "1477327843"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9781477327845"
+        }
+      ],
+      "numOfCopies": 18
+    },
+    {
+      "id": "2156",
+      "title": "Noam-The First Easter Bunny",
+      "authors": [
+        "Emile B LaCerte"
+      ],
+      "numPages": 44,
+      "description": "<p>Emile B. LaCerte Jr., with the help of his sister. We restored the legend of the Easter Bunny with the Passion story of Christ. With imagination hope and love becomes reality. That's what we storytellers do. We restore order with imagination. We instill hope again and again and again. (Walt Disney) </p>",
+      "imageLink": {
+        "small": "http://books.google.com/books/publisher/content?id=BKIuEAAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE70iLlq9LTF6bTzdkmATYkFx2A4NsnDfkVmBkmAdfn5cukMCW4CXyZoMVePVP-qS1LgLMlkvlVithyMLefdYBHUIRyx0wccHbYqoT74yqrdWkYtcSIvmEmFTP7QukYs4eRGEunPi&source=gbs_api",
+        "big": "http://books.google.com/books/publisher/content?id=BKIuEAAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE734O-aLK_nWhlGvp1Xw1f9tNWi8ji8eXfBUj2iCZwUKVSdQrOGUNUvt_MTqYlubUQALwNnhs6k6DqyjGorE_1jYZGoeyQ3po1MeRzbd8MiBSUxu-MQ_guOWpL2PnRYYa-cFyYSO&source=gbs_api"
+      },
+      "categories": [
+        "Juvenile Fiction / Holidays & Celebrations / Easter & Lent"
+      ],
+      "ISBN": [
+        {
+          "type": "ISBN_10",
+          "identifier": "1098020170"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9781098020170"
+        }
+      ],
+      "numOfCopies": 6
+    },
+    {
+      "id": "db3c",
+      "title": "Chomsky For Beginners",
+      "authors": [
+        "David Cogswell"
+      ],
+      "numPages": 160,
+      "description": "Noam Chomsky has written some 30 books, he is one of the most-quoted authors on Earth, <i>The New York</i> <i>Times</i> calls him “arguably the most important intellectual alive” – yet most people have no idea who he is or what he’s about.<br><br><i>Chomsky For Beginners</i> tells you what he’s about: Chomsky is known for his work in two distinct areas – Linguistics and... “Gadflying.” (“Gadfly,” the word applied to Socrates, comes closest to the constant social irritant that Chomsky has become.) It is Chomsky’s work as Political Gadfly and Media Critic that has given passion and hope to the general public – and alienated the Major Media – which is, of course, why you don’t know more about him.<br><br>Chomsky’s message is very simple: Huge corporations run our country, the world, both political parties, and Major Media. (You suspected it; Chomsky proves it.) If enough people open their minds to what he has to say, the whole gingerbread fantasy we’ve been fed about America might turn into a real democracy.<br><br>What’s so special about <i>Chomsky For Beginners</i>? The few existing intros to Chomsky cover either Chomsky-the-Linguist or Chomsky-the-Political-Gadfly. <i>Chomsky For Beginners </i>covers both – plus an exclusive interview with the maverick genius. The clarity of David Cogwell’s text and the wit of Paul Gordon’s illustrations make Chomsky as easy to understand as the genius next door. Words and art are combined to clarify (but not oversimplify) the work and to “humanize” the man who may very well be what one savvy interviewer called him – “the smartest man on Earth.” ",
+      "imageLink": {
+        "small": "http://books.google.com/books/publisher/content?id=8QFFAwAAQBAJ&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE70dXZAncWOz2evjwrwiisIW0zqPCVaYUXXfwotoYv-hVjIYYeh6qlTNhjF7KFZHhhhM4l3pZHnTkjJJwDj5oKEnAd1t6QhHa95Ox5leJP8WlmmgjVV0vI53mXvLzwpU8zJ_b3VV&source=gbs_api",
+        "big": "http://books.google.com/books/publisher/content?id=8QFFAwAAQBAJ&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE70lyLyK_zHYgkwBbu892wwrvbRU0QTlusd6meDuKbxHbuK2o6ChODR_xW1BzoND6Gro-0jr6Oc7rVXLYhXBxlbz51OR2HXb1VyRu0b8OxqORl2oegkvWtgFgIVQZF4n6WPFZGFb&source=gbs_api"
+      },
+      "categories": [
+        "Political Science / History & Theory"
+      ],
+      "ISBN": [
+        {
+          "type": "ISBN_10",
+          "identifier": "1939994012"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9781939994011"
+        }
+      ],
+      "numOfCopies": 12
+    },
+    {
+      "id": "8727",
+      "title": "Language and Politics",
+      "authors": [
+        "Noam Chomsky"
+      ],
+      "numPages": 802,
+      "description": "<p>An enormous chronological collection of over fifty interviews conducted with Chomsky from 1968 to present day. Many of the pieces have never appeared in any other collection, some have never appeared in English, and more than one has been suppressed. This expanded edition contains fifty pages of brand new interviews.</p><p>The interviews add a personal dimension to the full breadth of Chomsky�s impressive written canon�equally covering his analysis in linguistics, philosophy, and politics. This updated, annotated, fully indexed new edition contains an extensive bibliography, as well as an intro-duction by editor Carlos Otero on the relationship between Chomsky�s language and politics.</p><p><b>Praise for previous edition:</b></p><p>\"For those who know [Chomsky] only as media analyst and critic of foreign policy, this wide-ranging book offers glimpses of his studies on language, anarchist theory, and critiques of radical politics.\"�NACLA </p><p><b>Noam Chomsky</b> is a renowned scholar, the founder of the modern science of linguistics, a philosopher, a poli-tical and social analyst, a media critic, and author of more than one hundred books. Recipient of numerous prizes and awards, Chomsky ranks with Marx, Shakespeare and the Bible as one of the ten most quoted sources in the -humanities. His previous works include the best selling 9-11, and the critically acclaimed AK Audio Collection.</p><p><b>Carlos Otero</b>, who also edited <i>Radical Priorities</i> by Noam Chomsky, teaches linguistics at the University of California at Los Angeles.</p>",
+      "imageLink": {
+        "small": "http://books.google.com/books/content?id=1lCwP-RNExkC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE70Xsw6mY33oOD9BtkrTVMjBSeforXtXRbhAAuYlId3zb1AYP7iOP76DGDkgIs3EodP678VFeg6_qbUxb9sO6i-VUZy8F32XAnPjq1sUS-lvlCq_2eVAb2fkoPWYbUdg8yFAjvrO&source=gbs_api",
+        "big": "http://books.google.com/books/content?id=1lCwP-RNExkC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72L7qrBoEiM4w68Mh6qMfXrUd7mcUZjGZ1HnJmzJKXzu8TofgOR4m4JGf-a_Xe9b_zgf_GqKJK3hgndLSGIrGRCzUXIj5_FbNzHlQUMklUpcdpRgz79ybey9XiA9lgMuMN6nr4t&source=gbs_api"
+      },
+      "categories": [
+        "History / Modern / 20th Century",
+        "History / Revolutionary",
+        "History / United States / 20th Century",
+        "Language Arts & Disciplines / Linguistics / Sociolinguistics",
+        "Political Science / History & Theory"
+      ],
+      "ISBN": [
+        {
+          "type": "ISBN_10",
+          "identifier": "1902593820"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9781902593821"
+        }
+      ],
+      "numOfCopies": 19
+    },
+    {
+      "id": "ebf4",
+      "title": "Hopes and Prospects",
+      "authors": [
+        "Noam Chomsky"
+      ],
+      "numPages": 336,
+      "description": "<p><b><i>Hopes and Prospects</i> is Noam Chomsky's indispensable analysis of the world at present and a roadmap for the future</b><br><br>In <i>Hopes and Prospects</i>, Noam Chomsky examines the challenges of our early twenty-first century. He explores obstacles and threats such as the widening gap between North and South America, US exceptionalism (which continues under Obama), the fiascos of Iraq and Afghanistan, the US-Israeli assault on Gaza and the recent financial bailouts.<br><br>He sees hope for the future and opportunities to move forward, however - in the democratic wave in Latin America and in the global solidarity movements which suggest 'real progress towards freedom and justice'.<br><br><i>Hopes and Prospects</i> is essential reading for anyone wishing to understand the primary challenges facing the human race in the coming years.<br><br><b>'A treasure-trove of truths that shouldn't be left buried in our sandpit of propaganda and lies' Johann Hari, <i>Independent</i><br><br>'Noam Chomsky is a global phenomenon . . . he may be the most widely read American voice on foreign policy on the planet today' <i>The New York Times Book Review</i><br><br>'The west's most prominent critic of US imperialism . . . the closest thing in the English-speaking world to an intellectual superstar' <i>Guardian</i></b></p>",
+      "imageLink": {
+        "small": "http://books.google.com/books/content?id=xuQstngyHdEC&printsec=frontcover&img=1&zoom=5&edge=curl&imgtk=AFLRE70Z82EyCBrEDNcMrbwK42ltG4Pd4lL8I5oA3jV6cgfMLAgGznW_v5aWzqrZxJe3Bi9wJecxVBxOlMGvD0tyoByYYboPrR4h2wJT7gF_Nm0MrOwWcZ-8DGCrpHeHvkEBnOZqhZra&source=gbs_api",
+        "big": "http://books.google.com/books/content?id=xuQstngyHdEC&printsec=frontcover&img=1&zoom=1&edge=curl&imgtk=AFLRE72iRj7hsr_UOF9JOwm8hZAa5lK0gSf5KPr5jHEDlGdKHdnRPvy5Jj6-ZzC8WHsGP3Fjng35xzBfb7wgIVVr9JA6wac-Xp8b8SIMXz_qTT4ZankNalNHH55HR0Z-VKC-iRvNmnmf&source=gbs_api"
+      },
+      "categories": [
+        "Political Science / International Relations / General",
+        "Political Science / History & Theory",
+        "Political Science / World / General",
+        "Philosophy / Political",
+        "Political Science / Globalization",
+        "Science / Global Warming & Climate Change",
+        "Business & Economics / Globalization",
+        "Political Science / Political Ideologies / Communism, Post-Communism & Socialism",
+        "Business & Economics / International / General",
+        "Business & Economics / Economic History",
+        "History / Wars & Conflicts / Afghan War (2001-2021)",
+        "History / Wars & Conflicts / Iraq War (2003-2011)"
+      ],
+      "ISBN": [
+        {
+          "type": "ISBN_10",
+          "identifier": "0241144760"
+        },
+        {
+          "type": "ISBN_13",
+          "identifier": "9780241144763"
+        }
+      ],
+      "numOfCopies": 6
     }
   ],
   "history": [
     {
-      "bookName": "b",
-      "operationType": "2",
-      "operationDate": "3",
-      "operationTime": "4"
-    },
-    {
-      "bookName": "a",
-      "operationType": "2",
-      "operationDate": "3",
-      "operationTime": "4"
-    },
-    {
-      "id": "1ae5",
-      "bookName": "From Eden to Eden",
-      "operationType": "Update",
-      "comments": "Copy has been added (17)",
-      "operationDate": "15:19:38"
-    },
-    {
-      "id": "019d",
-      "bookName": "Thomas F. Torrance",
-      "operationType": "Update",
-      "comments": "Copy has been added (20)",
-      "operationDate": "15:20:30"
-    },
-    {
-      "id": "2236",
-      "bookName": "Thomas F. Torrance",
-      "operationType": "Update",
-      "comments": "Copy has been added (21)",
-      "operationDate": "15:20:31"
-    },
-    {
-      "id": "c8ff",
-      "bookName": "Davanagere University-Davanagere Ph.D. Entrance Test-Research Aptitude Section Common For All Streams eBook",
-      "operationType": "Update",
-      "comments": "Copy has been removed (7)",
-      "operationDate": "15:20:35"
-    },
-    {
-      "id": "a8e8",
-      "bookName": "The Perplex'd Dutchess: Or, Treachery Rewarded. Being Some Memoirs of the Court of Malfy ... To which is Added, Innocence Preserved: a Novel",
-      "operationType": "Update",
-      "comments": "Copy has been added (20)",
-      "operationDate": "15:21:02"
-    },
-    {
-      "id": "c1a5",
-      "bookName": "The Perplex'd Dutchess: Or, Treachery Rewarded. Being Some Memoirs of the Court of Malfy ... To which is Added, Innocence Preserved: a Novel",
-      "operationType": "Update",
-      "comments": "Copy has been added (21)",
-      "operationDate": "15:21:02"
-    },
-    {
-      "id": "c985",
-      "bookName": "The Perplex'd Dutchess: Or, Treachery Rewarded. Being Some Memoirs of the Court of Malfy ... To which is Added, Innocence Preserved: a Novel",
-      "operationType": "Update",
-      "comments": "Copy has been added (22)",
-      "operationDate": "15:21:02"
-    },
-    {
-      "id": "3d18",
-      "bookName": "The Perplex'd Dutchess: Or, Treachery Rewarded. Being Some Memoirs of the Court of Malfy ... To which is Added, Innocence Preserved: a Novel",
-      "operationType": "Update",
-      "comments": "Copy has been added (23)",
-      "operationDate": "15:21:03"
-    },
-    {
-      "id": "2b19",
-      "bookName": "Thomas F. Torrance",
-      "operationType": "Update",
-      "comments": "Copy has been removed (19)",
-      "operationDate": "15:21:08"
-    },
-    {
-      "id": "bde2",
-      "bookName": "The Experience of Thomas H. Jones",
-      "operationType": "Update",
-      "comments": "Copy has been added (6)",
-      "operationDate": "15:21:15"
-    },
-    {
-      "id": "20ed",
-      "bookName": "The Experience of Thomas H. Jones",
-      "operationType": "Update",
-      "comments": "Copy has been added (7)",
-      "operationDate": "15:21:15"
-    },
-    {
-      "id": "09c0",
-      "bookName": "The Experience of Thomas H. Jones",
-      "operationType": "Update",
-      "comments": "Copy has been added (8)",
-      "operationDate": "15:21:16"
-    },
-    {
-      "id": "b1f6",
-      "bookName": "Messi",
-      "operationType": "Delete",
-      "comments": "Messi has been removed from the libary",
-      "operationDate": "15:42:35"
-    },
-    {
-      "id": "01b3",
-      "bookName": "OMRI Products List",
+      "id": "3a50",
+      "bookName": "One Piece, Vol. 100",
       "operationType": "Create",
-      "comments": "OMRI Products List has been added to the libary",
-      "operationDate": "15:50:27"
+      "comments": "One Piece, Vol. 100 has been added to the libary",
+      "operationDate": "29.5.2024",
+      "operationTime": "23:32:42"
     },
     {
-      "id": "52cc",
-      "bookName": "Children of Eden",
+      "id": "a1e2",
+      "bookName": "801 Science Physics Mcqs for N Level",
       "operationType": "Update",
-      "comments": "Copy has been added (14)",
-      "operationDate": "15:56:04"
+      "comments": "Copy has been added (12)",
+      "operationDate": "29.5.2024",
+      "operationTime": "23:32:57"
+    },
+    {
+      "id": "f68c",
+      "bookName": "A Dictionary of Hymnology",
+      "operationType": "Update",
+      "comments": "Copy has been added (20)",
+      "operationDate": "29.5.2024",
+      "operationTime": "23:33:03"
+    },
+    {
+      "id": "83f7",
+      "operationType": "Delete",
+      "operationDate": "29.5.2024",
+      "operationTime": "23:35:47"
+    },
+    {
+      "id": "623a",
+      "bookName": "A Dictionary of Medical Science ...",
+      "operationType": "Delete",
+      "comments": "A Dictionary of Medical Science ... has been removed",
+      "operationDate": "29.5.2024",
+      "operationTime": "23:39:32"
+    },
+    {
+      "id": "dd90",
+      "bookName": "A Dictionary of Music and Musicians",
+      "operationType": "Delete",
+      "comments": "A Dictionary of Music and Musicians has been removed",
+      "operationDate": "29.5.2024",
+      "operationTime": "23:39:45"
+    },
+    {
+      "id": "3487",
+      "bookName": "Real Madrid CF",
+      "operationType": "Create",
+      "comments": "Real Madrid CF has been added to the libary",
+      "operationDate": "29.5.2024",
+      "operationTime": "23:40:20"
+    },
+    {
+      "id": "5e22",
+      "bookName": "Real Madrid",
+      "operationType": "Create",
+      "comments": "Real Madrid has been added to the libary",
+      "operationDate": "29.5.2024",
+      "operationTime": "23:40:20"
+    },
+    {
+      "id": "4fb6",
+      "bookName": "Fear and Loathing in La Liga",
+      "operationType": "Create",
+      "comments": "Fear and Loathing in La Liga has been added to the libary",
+      "operationDate": "29.5.2024",
+      "operationTime": "23:40:20"
+    },
+    {
+      "id": "63b7",
+      "bookName": "Forging Glory",
+      "operationType": "Create",
+      "comments": "Forging Glory has been added to the libary",
+      "operationDate": "29.5.2024",
+      "operationTime": "23:40:21"
+    },
+    {
+      "id": "9924",
+      "bookName": "Real Madrid on This Day",
+      "operationType": "Create",
+      "comments": "Real Madrid on This Day has been added to the libary",
+      "operationDate": "29.5.2024",
+      "operationTime": "23:40:21"
+    },
+    {
+      "id": "6b65",
+      "bookName": "Real Madrid",
+      "operationType": "Create",
+      "comments": "Real Madrid has been added to the libary",
+      "operationDate": "29.5.2024",
+      "operationTime": "23:40:21"
+    },
+    {
+      "id": "2f87",
+      "bookName": "Real Madrid",
+      "operationType": "Create",
+      "comments": "Real Madrid has been added to the libary",
+      "operationDate": "29.5.2024",
+      "operationTime": "23:40:21"
+    },
+    {
+      "id": "8b40",
+      "bookName": "The Real Madrid Way",
+      "operationType": "Create",
+      "comments": "The Real Madrid Way has been added to the libary",
+      "operationDate": "29.5.2024",
+      "operationTime": "23:40:22"
+    },
+    {
+      "id": "a8e0",
+      "bookName": "Focus On: 100 Most Popular Real Madrid C.F. Players",
+      "operationType": "Create",
+      "comments": "Focus On: 100 Most Popular Real Madrid C.F. Players has been added to the libary",
+      "operationDate": "29.5.2024",
+      "operationTime": "23:40:22"
+    },
+    {
+      "id": "fb7b",
+      "bookName": "Real Madrid CF",
+      "operationType": "Create",
+      "comments": "Real Madrid CF has been added to the libary",
+      "operationDate": "29.5.2024",
+      "operationTime": "23:40:23"
+    },
+    {
+      "id": "9e3f",
+      "bookName": "Liverpool in the Headlines",
+      "operationType": "Create",
+      "comments": "Liverpool in the Headlines has been added to the libary",
+      "operationDate": "29.5.2024",
+      "operationTime": "23:43:14"
+    },
+    {
+      "id": "8983",
+      "bookName": "In the Land of Israel",
+      "operationType": "Create",
+      "comments": "In the Land of Israel has been added to the libary",
+      "operationDate": "29.5.2024",
+      "operationTime": "23:43:38"
+    },
+    {
+      "id": "b304",
+      "bookName": "Netanya",
+      "operationType": "Create",
+      "comments": "Netanya has been added to the libary",
+      "operationDate": "29.5.2024",
+      "operationTime": "23:44:10"
+    },
+    {
+      "id": "87a5",
+      "bookName": "Annual Report of the Missionary Society of the Methodist Episcopal Church",
+      "operationType": "Delete",
+      "comments": "Annual Report of the Missionary Society of the Methodist Episcopal Church has been removed",
+      "operationDate": "29.5.2024",
+      "operationTime": "23:44:59"
+    },
+    {
+      "id": "ecf7",
+      "bookName": "In the Land of the Patriarchs",
+      "operationType": "Create",
+      "comments": "In the Land of the Patriarchs has been added to the libary",
+      "operationDate": "29.5.2024",
+      "operationTime": "23:45:41"
+    },
+    {
+      "id": "6727",
+      "bookName": "Noam-The First Easter Bunny",
+      "operationType": "Create",
+      "comments": "Noam-The First Easter Bunny has been added to the libary",
+      "operationDate": "29.5.2024",
+      "operationTime": "23:45:41"
+    },
+    {
+      "id": "8386",
+      "bookName": "Chomsky For Beginners",
+      "operationType": "Create",
+      "comments": "Chomsky For Beginners has been added to the libary",
+      "operationDate": "29.5.2024",
+      "operationTime": "23:45:45"
+    },
+    {
+      "id": "86f6",
+      "bookName": "Language and Politics",
+      "operationType": "Create",
+      "comments": "Language and Politics has been added to the libary",
+      "operationDate": "29.5.2024",
+      "operationTime": "23:45:46"
+    },
+    {
+      "id": "4dd3",
+      "bookName": "Hopes and Prospects",
+      "operationType": "Create",
+      "comments": "Hopes and Prospects has been added to the libary",
+      "operationDate": "29.5.2024",
+      "operationTime": "23:45:57"
     }
   ],
-  "favourites": []
+  "favourites": [
+    {
+      "id": "35ab",
+      "bookId": "0977"
+    },
+    {
+      "id": "c480",
+      "bookId": "e45b"
+    },
+    {
+      "id": "5d24",
+      "bookId": "5ef7"
+    },
+    {
+      "id": "aa55",
+      "bookId": "9522"
+    },
+    {
+      "id": "442a",
+      "bookId": "acde"
+    },
+    {
+      "id": "29ee",
+      "bookId": "017a"
+    },
+    {
+      "id": "6cbc",
+      "bookId": "7146"
+    },
+    {
+      "id": "dc07",
+      "bookId": "3df2"
+    },
+    {
+      "id": "4423",
+      "bookId": "daf4"
+    },
+    {
+      "id": "1c81",
+      "bookId": "12d2"
+    },
+    {
+      "id": "f10a",
+      "bookId": "a3d9"
+    },
+    {
+      "id": "3aaa",
+      "bookId": "2367"
+    },
+    {
+      "id": "6eac",
+      "bookId": "6d4d"
+    },
+    {
+      "id": "eb93",
+      "bookId": "daec"
+    },
+    {
+      "id": "429b",
+      "bookId": "866b"
+    },
+    {
+      "id": "b757",
+      "bookId": "4a7d"
+    }
+  ]
 }

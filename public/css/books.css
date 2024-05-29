@@ -17,6 +17,7 @@ main {
   width: 100%;
   grid-template-columns: 1fr 140px;
 }
+
 /* Side Bar */
 .side-bar-wrapper {
   margin-top: 1px;
@@ -24,29 +25,36 @@ main {
   border-radius: 4px;
   background-color: var(--clr-neutral-700);
 }
+
 .side-bar {
   flex-direction: column;
 }
+
 .side-bar li:first-child {
   font-size: 1.15rem;
   font-weight: 700;
   text-align: center;
   padding: 0.75rem;
 }
+
 .side-bar li:last-child {
   border-bottom: 0;
 }
+
 .side-bar li {
   color: var(--clr-neutral-110);
   border-bottom: 1px solid var(--clr-primary-200);
   padding: 1rem;
 }
+
 .side-bar li:not(:first-child) {
   cursor: pointer;
 }
+
 .side-bar li:hover:not(:first-child) {
   background-color: hsl(0, 0%, 30%);
 }
+
 .side-bar li:active:not(:first-child) {
   transform: translateY(2px);
 }
@@ -59,16 +67,19 @@ main {
   grid-column-start: 1;
   grid-row-start: 1;
 }
+
 .create-options {
   width: 100%;
   margin-top: 1rem;
   justify-content: center;
   gap: 1rem;
 }
+
 .option-btn {
   width: 150px;
   padding-block: 1rem;
 }
+
 @media (min-width: 458px) {
   .create-options {
     margin-top: 3.5rem;
@@ -81,10 +92,12 @@ main {
   grid-row-start: 2;
   justify-content: center;
 }
+
 .forms-container {
   flex-direction: column;
   align-items: center;
 }
+
 /* forms */
 #add {
   margin-top: 2rem;
@@ -123,6 +136,7 @@ main {
   border-color: var(--clr-primary-500);
   box-shadow: var(--box-shadow-light1);
 }
+
 #add .btn {
   margin: auto;
   background-color: var(--clr-primary-500);
@@ -132,14 +146,17 @@ main {
   grid-column-start: span 2;
   padding-block: 0.75rem;
 }
+
 @media (max-width: 600px) {
   #add {
     grid-template-columns: 1fr;
     gap: 0.5rem;
   }
+
   #add div {
     margin-bottom: 0;
   }
+
   #add .btn {
     display: inline-block;
     margin: auto;
@@ -148,17 +165,20 @@ main {
     padding-block: 0.5rem;
   }
 }
+
 #delete {
   display: none;
 
 }
-#delete-isbn{
+
+#delete-isbn {
   padding-block: .75rem;
   padding-inline: 1.25rem;
   width: 70%;
   max-width: 400px;
 }
-#delete i{
+
+#delete i {
   padding: .5rem;
 }
 
@@ -168,12 +188,14 @@ main {
   align-items: center;
   flex-direction: column;
 }
+
 .search-book {
   justify-content: center;
   gap: 0;
   width: 100%;
   margin-top: 2rem;
 }
+
 form#search-by-name {
   gap: 4px;
 }
@@ -184,28 +206,24 @@ form#search-by-name {
   width: 60%;
   max-width: 400px;
 }
+
 #search {
   padding-inline: 1.25rem;
 }
+
 #add-books {
   display: none;
   transform: translateX(-3rem);
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
+
 
 #books {
   margin-top: 2rem;
   gap: 2rem;
   justify-content: center;
 }
+
 .book {
   border-radius: 4px;
   box-shadow: var(--box-shadow-light1);
@@ -215,40 +233,39 @@ form#search-by-name {
   padding: 0.5rem;
   width: 300px;
 }
+
 .book:hover {
   transform: translateY(1px);
 }
+
 .book:active {
   transform: translateY(2px);
 }
+
 .book-text {
   flex-direction: column;
   width: 70%;
 }
+
 .book-img {
   margin-left: 1rem;
   width: 20%;
   justify-content: end;
 }
+
 .navigate-pages-wrapper {
   margin-top: 2rem;
 }
+
 .navigate-pages-wrapper button {
   color: var(--clr-neutral-300);
 }
+
 .next {
   visibility: hidden;
 }
+
 .prev {
   visibility: hidden;
 }
-.loader-container {
-  display: none;
-  transform: translateX(-2rem);
-}
-.loader {
-  font-size: 20px;
-  margin-top: 1rem;
-  display: inline-block;
-  animation: spin 2.5s linear infinite;
-}
+

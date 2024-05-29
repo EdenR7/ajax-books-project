@@ -2,6 +2,7 @@ let currentPage = 1;
 const pageMax = 12;
 const booksUrl = 'http://localhost:8001/books';
 const historyUrl = 'http://localhost:8001/history';
+const favouritesUrl = 'http://localhost:8001/favourites';
 const bookListElement = document.getElementById("books");
 let searchPaging = false;
 const nextBtn = document.querySelector(".next");
@@ -10,16 +11,16 @@ const prevBtn = document.querySelector(".prev");
 
 //Display all books
 async function displayBooksPage() {
-    let books;
-    await getPage(currentPage)
+  let books;
+  await getPage(currentPage)
     .then(res => books = res)
-    bookListElement.innerHTML= "";
-    for (const book of books) {
-        bookListElement.innerHTML += `
+  bookListElement.innerHTML = "";
+  for (const book of books) {
+    bookListElement.innerHTML += `
         <li id=${book.id} class="flex-group book" onclick="displayBook(this.id)">
         <div class="book-text flex-group">
           <h3>${book.title}</h3>
-          <p> ${book.authors?`Wriiten by ${book.authors[0]}`:'Anonymus author'}</p>
+          <p> ${book.authors ? `Wriiten by ${book.authors[0]}` : 'Anonymus author'}</p>
         </div>
         <div class="book-img flex-group">
           <img
@@ -28,59 +29,60 @@ async function displayBooksPage() {
           />
         </div>
       </li>`
-    }
+  }
 }
 async function getPage() {
-    currentPage === 1 ? document.querySelector(".prev").style.visibility = "hidden" : document.querySelector(".prev").style.visibility = "visible";
-    const response = await axios.get(`${booksUrl}`, {
-        params: {
-            _page: currentPage,
-            _per_page : pageMax,
-            _sort: 'title',
-            _order: 'desc'
-        }
-        });
-    return response.data.data;
+  currentPage === 1 ? document.querySelector(".prev").style.visibility = "hidden" : document.querySelector(".prev").style.visibility = "visible";
+  const response = await axios.get(`${booksUrl}`, {
+    params: {
+      _page: currentPage,
+      _per_page: pageMax,
+      _sort: 'title',
+      _order: 'desc'
+    }
+  });
+  return response.data.data;
 }
 //Paginote
-async function nextPage(){
-    if (!searchPaging) {
-      currentPage++;
-      await displayBooksPage();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      bookListElement.innerHTML= "";
-      currentPageSearch ++;
-      validateSearch()
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+async function nextPage() {
+  if (!searchPaging) {
+    currentPage++;
+    await displayBooksPage();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    bookListElement.innerHTML = "";
+    currentPageSearch++;
+    validateSearch()
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
 }
-async function prevPage(){
-    if (!searchPaging) {
-      currentPage --;
-      await displayBooksPage();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    } else {
-      bookListElement.innerHTML= "";
-      currentPageSearch --;
-      validateSearch();
-      window.scrollTo({ top: 0, behavior: 'smooth' });
-    }
+async function prevPage() {
+  if (!searchPaging) {
+    currentPage--;
+    await displayBooksPage();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  } else {
+    bookListElement.innerHTML = "";
+    currentPageSearch--;
+    validateSearch();
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 }
 
 //Overlay functions
 async function displayBook(bookID) {
-    const book = await getBookFromDB(bookID);
-    document.querySelector(".overlay__book-img").innerHTML =`<img
+  const book = await getBookFromDB(bookID);
+  await displayStar(bookID);
+  document.querySelector(".overlay__book-img").innerHTML = `<img
     src="${book.imageLink.big}"
     alt=""
-  />` ;  
-  document.querySelector('.overlay__book-details').innerHTML= overlayBookDetails(book);
+  />` ;
+  document.querySelector('.overlay__book-details').innerHTML = overlayBookDetails(book);
   document.querySelector('#book-copies').innerText = book.numOfCopies;
-  setTimeout(()=>{
+  setTimeout(() => {
     displayOverlay(bookID);
-  },300);
+  }, 300);
 }
 function overlayBookDetails(element) {
   const firstISBN = element.ISBN && element.ISBN.length > 0 ? element.ISBN[0].identifier : null;
@@ -108,39 +110,61 @@ function overlayBookDetails(element) {
   `;
 }
 async function getBookFromDB(id) {
-    const response = await axios.get(`${booksUrl}/${id}`);
-    return response.data;
+  const response = await axios.get(`${booksUrl}/${id}`);
+  return response.data;
 }
-async function addCopy(event){
-    const bookID = event.target.parentElement.parentElement.parentElement.parentElement.getAttribute('identifier');
-    const getResponse = await axios.get(`${booksUrl}/${bookID}`);
-    const book = getResponse.data;
-    const newCopies = book.numOfCopies + 1;
-    const patchResponse = await axios.patch(`${booksUrl}/${bookID}`, {
-        numOfCopies: newCopies
-      });
-    document.querySelector('#book-copies').innerText = newCopies;
-    updateHistory("Update", book.title, `Copy has been added (${book.numOfCopies+1})`);
+async function addCopy(event) {
+  const bookID = event.target.parentElement.parentElement.parentElement.parentElement.getAttribute('identifier');
+  const getResponse = await axios.get(`${booksUrl}/${bookID}`);
+  const book = getResponse.data;
+  const newCopies = book.numOfCopies + 1;
+  const patchResponse = await axios.patch(`${booksUrl}/${bookID}`, {
+    numOfCopies: newCopies
+  });
+  document.querySelector('#book-copies').innerText = newCopies;
+  updateHistory("Update", book.title, `Copy has been added (${book.numOfCopies + 1})`);
 }
-async function removeCopy(event){
-    const bookID = event.target.parentElement.parentElement.parentElement.parentElement.getAttribute('identifier');
-    const getResponse = await axios.get(`${booksUrl}/${bookID}`);
-    const book = getResponse.data;
-    const newCopies = book.numOfCopies - 1;
-    const patchResponse = await axios.patch(`${booksUrl}/${bookID}`, {
-        numOfCopies: newCopies
-      });
-    document.querySelector('#book-copies').innerText = newCopies;
-    updateHistory("Update", book.title, `Copy has been removed (${book.numOfCopies-1})`);
+async function removeCopy(event) {
+  const bookID = event.target.parentElement.parentElement.parentElement.parentElement.getAttribute('identifier');
+  const getResponse = await axios.get(`${booksUrl}/${bookID}`);
+  const book = getResponse.data;
+  const newCopies = book.numOfCopies - 1;
+  const patchResponse = await axios.patch(`${booksUrl}/${bookID}`, {
+    numOfCopies: newCopies
+  });
+  document.querySelector('#book-copies').innerText = newCopies;
+  updateHistory("Update", book.title, `Copy has been removed (${book.numOfCopies - 1})`);
+}
+async function displayStar(bookId) {
+  const inFav = await inFavouriteCheck(bookId);
+  if (inFav) {
+    document.querySelector(".favourite-delete-container").innerHTML=`
+      <i
+        id="mark-star"
+        class="fa-solid fa-star"
+        onclick="removeFromFavourites(event)"
+      ></i>
+      <i class="fa-solid fa-trash-can" onclick="deleteOperation(event)"></i>
+    `;
+  } else {
+    document.querySelector(".favourite-delete-container").innerHTML=`
+      <i
+        onclick="addToFavourite(event)"
+        class="fa-regular fa-star"
+        id="unmark-star"
+        ></i>
+      <i class="fa-solid fa-trash-can" onclick="deleteOperation(event)"></i>
+    `;
+  }
 }
 
 async function updateHistory(operation, name, comm) {
   const historyElement = {
-    bookName:name,
-    operationType:operation,
+    bookName: name,
+    operationType: operation,
     comments: comm,
-    operationDate:getCurrentDateTime().date,
-    operationDate:getCurrentDateTime().time
+    operationDate: getCurrentDateTime().date,
+    operationTime: getCurrentDateTime().time
   }
   const res = await axios.post(historyUrl, historyElement)
 }
@@ -151,47 +175,121 @@ function getCurrentDateTime() {
   return { date, time };
 }
 
-const closeBtns = document.querySelectorAll(".close-btn");
-closeBtns.forEach((btn=>{
-    btn.addEventListener('click', ()=>{
-        closeOverlay();
+//favourite operations
+async function addToFavourite(event) {
+  try {
+    const id = event.target.parentElement.parentElement.parentElement.parentElement.getAttribute('identifier');
+    await axios.post(favouritesUrl, {
+      bookId : id
     })
-}))
-function displayOverlay(bookID) {
-    document.querySelector("main").style.opacity = .5;
-    document.querySelector("nav").style.opacity = .5;
-    document.querySelector(".overlay-container").setAttribute('identifier', bookID);
-    document.querySelector(".overlay-container").style.display = "block";
+    setTimeout(async()=>{
+      await displayStar(id)
+    },500);
+  } catch (error) {
+    // alert
+  }
 }
-function closeOverlay() {
-    document.querySelector("main").style.opacity = 1;
-    document.querySelector("nav").style.opacity = 1;
-    document.querySelector(".overlay-container").style.display = "none";
-    document.querySelector(".overlay-container").removeAttribute('identifier');
+async function removeFromFavourites(event) {
+  try {
+    const bookID = event.target.parentElement.parentElement.parentElement.parentElement.getAttribute('identifier');
+    const favId = await inFavouriteCheck(bookID);
+    if (favId) {
+      await axios.delete(`${favouritesUrl}/${favId}`);
+    }else{
+      //alert
+    }
+    setTimeout(async()=>{
+      await displayStar(bookID)
+    },500);
+  } catch (error) {
+    
+  }
+}
+async function inFavouriteCheck(bookIdToFind) {
+  try {
+    const response = await axios.get(favouritesUrl);
+    const favBooks = response.data;
+    for (const fav of favBooks) {
+      if(bookIdToFind === fav.bookId){
+        return fav.id;
+      }
+    }
+  } catch (error) {
+    
+  }
 }
 
+//delete
+async function deleteOperation(event) {
+  try {
+    const id = event.target.parentElement.parentElement.parentElement.parentElement.getAttribute('identifier');
+    displayLoader();
+    const book = await getBookFromDB(id);
+    await axios.delete(`${booksUrl}/${id}`);
+    updateHistory("Delete", book.title, `${book.title} has been removed`);
+    closeOverlay();
+    if (searchPaging) {
+      currentPageSearch = 0;
+      performSearch();
+    } else {
+      currentPage = 1;
+      displayBooksPage();
+    }
+    closeLoader();
+  } catch (error) {
+    
+  }
+  
+  
+}
+
+const closeBtns = document.querySelectorAll(".close-btn");
+closeBtns.forEach((btn => {
+  btn.addEventListener('click', () => {
+    closeOverlay();
+  })
+}))
+function displayOverlay(bookID) {
+  document.querySelector("main").style.opacity = .5;
+  document.querySelector("nav").style.opacity = .5;
+  document.querySelector(".overlay-container").setAttribute('identifier', bookID);
+  document.querySelector(".overlay-container").style.display = "block";
+  
+}
+function closeOverlay() {
+  document.querySelector("main").style.opacity = 1;
+  document.querySelector("nav").style.opacity = 1;
+  document.querySelector(".overlay-container").style.display = "none";
+  document.querySelector(".overlay-container").removeAttribute('identifier');
+}
+
+//Search By Name
 let allSearchMatches = [];
-let currentPageSearch = 0 ;
-document.getElementById("search-by-name").addEventListener("submit",async (e)=>{
+let currentPageSearch = 0;
+document.getElementById("search-by-name").addEventListener("submit", async (e) => {
   e.preventDefault();
+  await performSearch();
+})
+async function performSearch() {
   searchPaging = true;
   allSearchMatches.length = 0;
   currentPageSearch = 0;
   const desiredValue = document.querySelector("#search-name").value.toLowerCase();
-  bookListElement.innerHTML= "";
+  bookListElement.innerHTML = "";
   const res = await getAllBooks();
   const allBooks = res.data;
-  allSearchMatches = allBooks.filter((book)=> book.title.toLowerCase().includes(desiredValue));
+  allSearchMatches = allBooks.filter((book) => book.title.toLowerCase().includes(desiredValue));
   validateSearch();
-})
+}
 function validateSearch() {
-  prevBtn.style.visibility = currentPageSearch === 0 ?"hidden":"visible"; 
-  nextBtn.style.display = currentPageSearch > (allSearchMatches.length/pageMax)-1 ? "none": "inline-block";
+  displayLoader();
+  prevBtn.style.visibility = currentPageSearch === 0 ? "hidden" : "visible";
+  nextBtn.style.display = currentPageSearch > (allSearchMatches.length / pageMax) - 1 ? "none" : "inline-block";
   const n = allSearchMatches.length;
-  let startBook = pageMax*currentPageSearch;
-  const lastBook = pageMax*(currentPageSearch+1);
-  if (n>startBook) {
-    const indicator = n>lastBook?lastBook:n;
+  let startBook = pageMax * currentPageSearch;
+  const lastBook = pageMax * (currentPageSearch + 1);
+  if (n > startBook) {
+    const indicator = n > lastBook ? lastBook : n;
     while (startBook < indicator) {
       const element = allSearchMatches[startBook];
       displaySearchedBook(element);
@@ -200,13 +298,14 @@ function validateSearch() {
   } else {
     // alert Message
   }
+  closeLoader()
 }
 function displaySearchedBook(book) {
   bookListElement.innerHTML += `
         <li id=${book.id} class="flex-group book" onclick="displayBook(this.id)">
         <div class="book-text flex-group">
           <h3>${book.title}</h3>
-          <p> ${book.authors?`Wriiten by ${book.authors[0]}`:'Anonymus author'}</p>
+          <p> ${book.authors ? `Wriiten by ${book.authors[0]}` : 'Anonymus author'}</p>
         </div>
         <div class="book-img flex-group">
           <img
@@ -222,10 +321,10 @@ async function getAllBooks() {
 }
 
 // default actions of dom
-document.addEventListener('DOMContentLoaded', function() {
-    const categorySelectWrapper = document.querySelector('.category-select-wrapper');
-    const selectElement = categorySelectWrapper.querySelector('select');
-    categorySelectWrapper.innerHTML += `
+document.addEventListener('DOMContentLoaded', function () {
+  const categorySelectWrapper = document.querySelector('.category-select-wrapper');
+  const selectElement = categorySelectWrapper.querySelector('select');
+  categorySelectWrapper.innerHTML += `
         <div class="category-select-styled">${selectElement.options[0].text}</div>
         <div class="category-select-options">
             ${Array.from(selectElement.options).map(option => `
@@ -233,26 +332,30 @@ document.addEventListener('DOMContentLoaded', function() {
             `).join('')}
         </div>
     `;
-    const categorySelectStyled = categorySelectWrapper.querySelector('.category-select-styled');
-    const categorySelectOptions = categorySelectWrapper.querySelector('.category-select-options');
-    categorySelectStyled.addEventListener('click', () => {
-        categorySelectWrapper.classList.toggle('open');
-    });
+  const categorySelectStyled = categorySelectWrapper.querySelector('.category-select-styled');
+  const categorySelectOptions = categorySelectWrapper.querySelector('.category-select-options');
+  categorySelectStyled.addEventListener('click', () => {
+    categorySelectWrapper.classList.toggle('open');
+  });
 
-    categorySelectOptions.querySelectorAll('div').forEach(optionDiv => {
-        optionDiv.addEventListener('click', () => {
-            categorySelectStyled.textContent = optionDiv.textContent;
-            selectElement.value = optionDiv.getAttribute('data-value');
-            categorySelectWrapper.classList.remove('open');
-            categorySelectWrapper.setAttribute('data-value', optionDiv.textContent);
-        });
+  categorySelectOptions.querySelectorAll('div').forEach(optionDiv => {
+    optionDiv.addEventListener('click', () => {
+      categorySelectStyled.textContent = optionDiv.textContent;
+      selectElement.value = optionDiv.getAttribute('data-value');
+      categorySelectWrapper.classList.remove('open');
+      categorySelectWrapper.setAttribute('data-value', optionDiv.textContent);
     });
+  });
 
-    displayBooksPage();
+  displayBooksPage();
 });
 
-//paginate end
-//Check if there is a ibsn 
-//pop up messages - loader...
-// filter categories
-//option to delete book
+function displayLoader() {
+  document.querySelector('.books-wrapper').querySelector('.loader-container').style.display = "block";
+}
+function closeLoader() {
+  setTimeout(() => {
+    document.querySelector('.books-wrapper').querySelector('.loader-container').style.display = "none";
+  }, 500)
+}
+
