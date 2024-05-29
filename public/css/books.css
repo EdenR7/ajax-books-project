@@ -216,15 +216,7 @@ form#search-by-name {
   transform: translateX(-3rem);
 }
 
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);
-  }
 
-  100% {
-    transform: rotate(360deg);
-  }
-}
 
 #books {
   margin-top: 2rem;
@@ -277,14 +269,3 @@ form#search-by-name {
   visibility: hidden;
 }
 
-.loader-container {
-  display: none;
-  transform: translateX(-2rem);
-}
-
-.loader {
-  font-size: 20px;
-  margin-top: 1rem;
-  display: inline-block;
-  animation: spin 2.5s linear infinite;
-}

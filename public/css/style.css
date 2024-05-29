@@ -170,3 +170,66 @@ form {
 .failure-container span:first-child {
   color: var(--clr-primary-500);
 }
+
+.loader-container {
+  display: none;
+  transform: translateX(-2rem);
+}
+
+.loader {
+  font-size: 20px;
+  margin-top: 1rem;
+  display: inline-block;
+  animation: spin 2.5s linear infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.fa-trash-can {
+  cursor: pointer;
+}
+.fa-trash-can:hover {
+  animation: shake 0.5s linear infinite;
+}
+
+@keyframes shake {
+  0% {
+    transform: rotate(7.5deg);
+  }
+  25% {
+    transform: rotate(15deg);
+  }
+  40% {
+    transform: rotate(7.5deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  65% {
+    transform: rotate(-7.5deg);
+  }
+  75% {
+    transform: rotate(-15deg);
+  }
+  100% {
+    transform: rotate(-7.5deg);
+  }
+}
+
+.fa-star {
+  cursor: pointer;
+}
+.fa-star:hover {
+  animation: shake 0.5s linear infinite;
+}
+nav .fa-star:hover {
+  animation: 0;
+}

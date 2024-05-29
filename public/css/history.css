@@ -39,34 +39,7 @@ i {
 .table_wrap {
   flex-grow: 1;
   overflow-x: auto;
-  margin-right: 2rem;
-}
-
-.side_bar {
-  background-color: var(--clr-neutral-110);
-  border: 1px solid var(--clr-text-black);
-  padding: 1rem;
-  border-radius: 5px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  color: var(--clr-text-black);
-}
-
-.side_bar h2 {
-  margin-bottom: 2rem;
-}
-
-.side_bar ul {
-  list-style-type: none;
-  padding: 0;
-  color: var(--clr-text-black);
-}
-
-.side_bar li {
-  margin: 1rem 0;
-}
-
-.side_bar label {
-  color: var(--clr-text-black);
+  /* margin-right: 2rem; */
 }
 
 .table_wrap h1 {
@@ -74,7 +47,8 @@ i {
 }
 
 table {
-  width: 100%;
+  /* width: 100%; */
+  max-width: 800px;
   border-collapse: collapse;
 }
 
@@ -99,56 +73,22 @@ td img {
   height: auto;
 }
 
-@media (max-width: 768px) {
-  .main-content {
-    flex-direction: column;
-  }
-
-  .table_wrap {
-    margin-right: 0;
-    margin-bottom: 1rem;
-  }
-}
-
-/* Specific styles for current page */
-.current-page {
-  color: var(--clr-primary-500) !important;
-  /* Ensure it takes precedence */
-}
-
-.current-page i {
-  color: var(--clr-primary-500) !important;
-  /* Ensure icon color changes as well */
-}
-
-body {
-  position: relative;
-  font-family: "Roboto", sans-serif;
-  line-height: 1.5;
-  background-color: var(--clr-primary-200);
-}
-
-a,
-input {
-  color: inherit;
-  text-decoration: none;
+.table_wrap {
+  gap: 1rem;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 0;
+  margin-bottom: 1rem;
 }
 
 @media (max-width: 768px) {
   .main-content {
     flex-direction: column;
   }
-
-  .table_wrap {
-    order: 2;
-    /* Change the order to move it below */
-  }
-
-  .side_bar {
-    order: 1;
-    /* Change the order to move it above */
-    margin-top: 2rem;
-    /* Add some space between the table_wrap and the side_bar */
+}
+@media (max-width: 450px) {
+  .main-content {
+    flex-direction: column;
   }
 }
 
@@ -157,17 +97,10 @@ input {
 }
 
 .pagination {
-  flex-direction: row;
-  align-items: center;
+  gap: 1rem;
   justify-content: center;
 }
 
-.pagination {
-  display: flex;
-  justify-content: center;
-  margin-top: 2rem;
-}
-
-.pagination button:hover {
+/* .pagination button:hover {
   background-color: var(--clr-primary-650);
-}
+} */

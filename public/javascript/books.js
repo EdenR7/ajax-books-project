@@ -54,7 +54,7 @@ async function addBooks() { // add the whole books list
 }
 async function addBookToData(element) { // add a book, if there wan an error it will update
     try {
-        updateHistory("Create", element.title, `${element.title} has been added to the libary`)
+        await updateHistory("Create", element.title, `${element.title} has been added to the libary`)
         await axios.post(booksUrl, element);
     } catch (error) {
         errorInAddingElements.push(element.title);
@@ -261,15 +261,6 @@ function createBookProperties(data) {
         }],
         numOfCopies: getRandomNumOfCopies()
     }
-
-    //title
-    //authors []
-    //numpages
-    //desc
-    //imageLink {}
-    //categories []
-    //isbn[{"type": "ISBN_10","identifier": "0830879110"}]
-    // num copies
 }
 
 //manually delete 
@@ -358,7 +349,7 @@ async function updateHistory(operation, name, comm) {
       operationType:operation,
       comments: comm,
       operationDate:getCurrentDateTime().date,
-      operationDate:getCurrentDateTime().time
+      operationTime: getCurrentDateTime().time
     }
     const res = await axios.post(historyUrl, historyElement)
   }

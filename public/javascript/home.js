@@ -2,6 +2,7 @@ let currentPage = 1;
 const pageMax = 12;
 const booksUrl = 'http://localhost:8001/books';
 const historyUrl = 'http://localhost:8001/history';
+const favouritesUrl = 'http://localhost:8001/favourites';
 const bookListElement = document.getElementById("books");
 let searchPaging = false;
 const nextBtn = document.querySelector(".next");
@@ -72,6 +73,7 @@ async function prevPage() {
 //Overlay functions
 async function displayBook(bookID) {
   const book = await getBookFromDB(bookID);
+  await displayStar(bookID);
   document.querySelector(".overlay__book-img").innerHTML = `<img
     src="${book.imageLink.big}"
     alt=""
@@ -133,6 +135,28 @@ async function removeCopy(event) {
   document.querySelector('#book-copies').innerText = newCopies;
   updateHistory("Update", book.title, `Copy has been removed (${book.numOfCopies - 1})`);
 }
+async function displayStar(bookId) {
+  const inFav = await inFavouriteCheck(bookId);
+  if (inFav) {
+    document.querySelector(".favourite-delete-container").innerHTML=`
+      <i
+        id="mark-star"
+        class="fa-solid fa-star"
+        onclick="removeFromFavourites(event)"
+      ></i>
+      <i class="fa-solid fa-trash-can" onclick="deleteOperation(event)"></i>
+    `;
+  } else {
+    document.querySelector(".favourite-delete-container").innerHTML=`
+      <i
+        onclick="addToFavourite(event)"
+        class="fa-regular fa-star"
+        id="unmark-star"
+        ></i>
+      <i class="fa-solid fa-trash-can" onclick="deleteOperation(event)"></i>
+    `;
+  }
+}
 
 async function updateHistory(operation, name, comm) {
   const historyElement = {
@@ -140,7 +164,7 @@ async function updateHistory(operation, name, comm) {
     operationType: operation,
     comments: comm,
     operationDate: getCurrentDateTime().date,
-    operationDate: getCurrentDateTime().time
+    operationTime: getCurrentDateTime().time
   }
   const res = await axios.post(historyUrl, historyElement)
 }
@@ -149,6 +173,74 @@ function getCurrentDateTime() {
   const date = now.toLocaleDateString();
   const time = now.toLocaleTimeString();
   return { date, time };
+}
+
+//favourite operations
+async function addToFavourite(event) {
+  try {
+    const id = event.target.parentElement.parentElement.parentElement.parentElement.getAttribute('identifier');
+    await axios.post(favouritesUrl, {
+      bookId : id
+    })
+    setTimeout(async()=>{
+      await displayStar(id)
+    },500);
+  } catch (error) {
+    // alert
+  }
+}
+async function removeFromFavourites(event) {
+  try {
+    const bookID = event.target.parentElement.parentElement.parentElement.parentElement.getAttribute('identifier');
+    const favId = await inFavouriteCheck(bookID);
+    if (favId) {
+      await axios.delete(`${favouritesUrl}/${favId}`);
+    }else{
+      //alert
+    }
+    setTimeout(async()=>{
+      await displayStar(bookID)
+    },500);
+  } catch (error) {
+    
+  }
+}
+async function inFavouriteCheck(bookIdToFind) {
+  try {
+    const response = await axios.get(favouritesUrl);
+    const favBooks = response.data;
+    for (const fav of favBooks) {
+      if(bookIdToFind === fav.bookId){
+        return fav.id;
+      }
+    }
+  } catch (error) {
+    
+  }
+}
+
+//delete
+async function deleteOperation(event) {
+  try {
+    const id = event.target.parentElement.parentElement.parentElement.parentElement.getAttribute('identifier');
+    displayLoader();
+    const book = await getBookFromDB(id);
+    await axios.delete(`${booksUrl}/${id}`);
+    updateHistory("Delete", book.title, `${book.title} has been removed`);
+    closeOverlay();
+    if (searchPaging) {
+      currentPageSearch = 0;
+      performSearch();
+    } else {
+      currentPage = 1;
+      displayBooksPage();
+    }
+    closeLoader();
+  } catch (error) {
+    
+  }
+  
+  
 }
 
 const closeBtns = document.querySelectorAll(".close-btn");
@@ -162,6 +254,7 @@ function displayOverlay(bookID) {
   document.querySelector("nav").style.opacity = .5;
   document.querySelector(".overlay-container").setAttribute('identifier', bookID);
   document.querySelector(".overlay-container").style.display = "block";
+  
 }
 function closeOverlay() {
   document.querySelector("main").style.opacity = 1;
@@ -170,10 +263,14 @@ function closeOverlay() {
   document.querySelector(".overlay-container").removeAttribute('identifier');
 }
 
+//Search By Name
 let allSearchMatches = [];
 let currentPageSearch = 0;
 document.getElementById("search-by-name").addEventListener("submit", async (e) => {
   e.preventDefault();
+  await performSearch();
+})
+async function performSearch() {
   searchPaging = true;
   allSearchMatches.length = 0;
   currentPageSearch = 0;
@@ -183,8 +280,9 @@ document.getElementById("search-by-name").addEventListener("submit", async (e) =
   const allBooks = res.data;
   allSearchMatches = allBooks.filter((book) => book.title.toLowerCase().includes(desiredValue));
   validateSearch();
-})
+}
 function validateSearch() {
+  displayLoader();
   prevBtn.style.visibility = currentPageSearch === 0 ? "hidden" : "visible";
   nextBtn.style.display = currentPageSearch > (allSearchMatches.length / pageMax) - 1 ? "none" : "inline-block";
   const n = allSearchMatches.length;
@@ -200,6 +298,7 @@ function validateSearch() {
   } else {
     // alert Message
   }
+  closeLoader()
 }
 function displaySearchedBook(book) {
   bookListElement.innerHTML += `
@@ -251,8 +350,12 @@ document.addEventListener('DOMContentLoaded', function () {
   displayBooksPage();
 });
 
-//paginate end
-//Check if there is a ibsn
-//pop up messages - loader...
-// filter categories
-//option to delete book
+function displayLoader() {
+  document.querySelector('.books-wrapper').querySelector('.loader-container').style.display = "block";
+}
+function closeLoader() {
+  setTimeout(() => {
+    document.querySelector('.books-wrapper').querySelector('.loader-container').style.display = "none";
+  }, 500)
+}
+

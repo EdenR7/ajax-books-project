@@ -1,145 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>myBooks</title>
+    <link rel="stylesheet" href="css/favourites.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+    />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>myBooks</title>
-  <link rel="stylesheet" href="css/favourites.css" />
-  <link rel="stylesheet" href="css/style.css" />
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
-</head>
-
-<body>
-  <nav class="navbar flex-group">
-    <div class="navbar-brand">
-      <h3>myBooks</h3>
-    </div>
-    <ul class="navbar-options flex-group">
-      <li>
-        <a href="#"><i class="fa-solid fa-house"></i> Home</a>
-      </li>
-      <li>
-        <a class="current-page" href="#"><i class="fa-solid fa-landmark"></i> History</a>
-      </li>
-      <li>
-        <a href="#"><i class="fa-regular fa-star"></i> Favourites</a>
-      </li>
-      <li>
-        <a href="#"><i class="fa-solid fa-magnifying-glass"></i> All Books</a>
-      </li>
-    </ul>
-  </nav>
-
-  <div class="main-content flex-group">
-    <div class="table_wrap">
-      <h1>Favourite Books:</h1>
-      <table>
-        <thead>
-          <tr>
-            <th>Favourite ID</th>
-            <th>Book ID</th>
-            <th>Book Name</th>
-            <th>ISBN</th>
-            <th>Image</th>
-            <th>Delete from Favourites</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>1</td>
-            <td>101</td>
-            <td>Harry Potter</td>
-            <td>978-3-16-148410-0</td>
-            <td>
-              <img
-                src="http://books.google.com/books/content?id=JHEkAQAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api""
-                alt=" Harry Potter">
-            </td>
-            <td><button class="delete-btn">X</button></td>
-          </tr>
-          <tr>
-            <td>2</td>
-            <td>102</td>
-            <td>The Hobbit</td>
-            <td>978-0-261-10300-3</td>
-            <td>
-              <img
-                src="http://books.google.com/books/content?id=JHEkAQAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
-                alt="The Hobbit" />
-            </td>
-            <td><button class="delete-btn">X</button></td>
-          </tr>
-          <tr>
-            <td>3</td>
-            <td>103</td>
-            <td>Pride and Prejudice</td>
-            <td>978-0-19-280238-5</td>
-            <td>
-              <img
-                src="http://books.google.com/books/content?id=JHEkAQAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
-                alt="Pride and Prejudice" />
-            </td>
-            <td><button class="delete-btn">X</button></td>
-          </tr>
-          <tr>
-            <td>4</td>
-            <td>104</td>
-            <td>The Great Gatsby</td>
-            <td>978-0-7432-7356-5</td>
-            <td>
-              <img
-                src="http://books.google.com/books/content?id=JHEkAQAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
-                alt="The Great Gatsby" />
-            </td>
-            <td><button class="delete-btn">X</button></td>
-          </tr>
-          <tr>
-            <td>5</td>
-            <td>105</td>
-            <td>1984</td>
-            <td>978-0-452-28423-4</td>
-            <td>
-              <img
-                src="http://books.google.com/books/content?id=JHEkAQAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
-                alt="1984" />
-            </td>
-            <td><button class="delete-btn">X</button></td>
-          </tr>
-          <tr>
-            <td>6</td>
-            <td>106</td>
-            <td>To Kill a Mockingbird</td>
-            <td>978-0-06-112008-4</td>
-            <td>
-              <img
-                src="http://books.google.com/books/content?id=JHEkAQAAMAAJ&printsec=frontcover&img=1&zoom=5&source=gbs_api"
-                alt="To Kill a Mockingbird" />
-            </td>
-            <td><button class="delete-btn">X</button></td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-
-    <div class="side_bar">
-      <h2>Sort Favourites by:</h2>
-      <label for="sort-select">Sort by:</label>
-      <select id="sort-select">
-        <option value="alphabetical">Alphabetical</option>
-        <option value="added">Date Added</option>
-      </select>
-    </div>
-  </div>
-
-  <!-- Pagination Buttons -->
-  <div class="pagination">
-    <button id="prev-btn">Previous</button>
-    <button id="next-btn">Next</button>
-  </div>
-
-  <script src="javascript/favourites.js"></script>
-</body>
-
+  <body>
+    <nav class="navbar flex-group">
+      <div class="navbar-brand">
+        <h3>myBooks</h3>
+      </div>
+      <ul class="navbar-options flex-group">
+        <li>
+          <a href="home.html"
+            ><i class="fa-solid fa-house"></i>
+            <span class="icon-text">Home</span></a
+          >
+        </li>
+        <li>
+          <a href="history.html"
+            ><i class="fa-solid fa-landmark"></i>
+            <span class="icon-text">History</span></a
+          >
+        </li>
+        <li>
+          <a class="current-page" href=""
+            ><i class="fa-regular fa-star"></i>
+            <span class="icon-text">Favourites</span></a
+          >
+        </li>
+        <li>
+          <a href="books.html"
+            ><i class="fa-solid fa-magnifying-glass"></i>
+            <span class="icon-text"> All Books</span></a
+          >
+        </li>
+      </ul>
+    </nav>
+    <button id="scroll-up" class="btn">
+      <i class="fa-solid fa-arrow-up"></i>
+    </button>
+    <main class="flex-froup">
+      <div class="table_wrap">
+        <h1>Favourite Books:</h1>
+        <table>
+          <thead>
+            <tr>
+              <th>Book ID</th>
+              <th>Book Name</th>
+              <th>ISBN</th>
+              <th>Image</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <script src="javascript/favourites.js"></script>
+  </body>
 </html>
