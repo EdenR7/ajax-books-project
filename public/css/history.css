@@ -100,7 +100,12 @@ td img {
   gap: 1rem;
   justify-content: center;
 }
-
-/* .pagination button:hover {
-  background-color: var(--clr-primary-650);
-} */
+#scroll-up {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: var(--clr-neutral-700);
+  color: var(--clr-primary-500);
+  border-radius: 5px;
+  z-index: 1000;
+}
